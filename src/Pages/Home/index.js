@@ -4,7 +4,7 @@ import Ball from '../../assets/svg/basketball-svgrepo-com.svg'
 import Title from '../../assets/Home/DropTheBall.png'
 import Play from '../../assets/Home/Play.png'
 import Menu from '../../assets/Nav/NavOpenButton.png'
-import { Typography, Box } from '@mui/material'
+import { Typography, Box, IconButton } from '@mui/material'
 
 import '../../App.css';
 
@@ -12,22 +12,29 @@ const Home = () => {
   return (
 
     <div className="App">
-      <header className="App-header">
         <Box
-        display="flex-end"
-        height={40}
+        backgroundColor='#FF3333'
+        
+        height={0}
         width='100%'
         position="sticky"
-        right='0'
+        
         >
+          <IconButton
+          
+          >
           <img 
           src={Menu}
+          
           />
+          </IconButton>
         </Box>
+      <header className="App-header">
         <img
           src={Title}
           style={{
             marginBottom: 25,
+            marginTop: 85,
 
           }}
         />

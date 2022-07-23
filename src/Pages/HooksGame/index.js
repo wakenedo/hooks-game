@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Ball from '../../assets/svg/ball-svgrepo-com.svg'
+import Ball from '../../assets/svg/basketball-svgrepo-com.svg'
 
 const HooksGame = () => {
     const [backgroundColor, setBackgroundColor] = useState('#ffeb33')

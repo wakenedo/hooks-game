@@ -3,33 +3,30 @@ import { Link } from 'react-router-dom';
 import Ball from '../../assets/svg/basketball-svgrepo-com.svg'
 import Title from '../../assets/Home/DropTheBall.png'
 import Play from '../../assets/Home/Play.png'
-import Menu from '../../assets/Nav/NavOpenButton.png'
-import { Typography, Box, IconButton } from '@mui/material'
 
-import '../../App.css';
+import { Typography, Box, Stack } from '@mui/material'
+import NavBar from '../../components/NavBar';
+
+
 
 const Home = () => {
   return (
 
-    <div className="App">
-        <Box
-        backgroundColor='#FF3333'
-        
-        height={0}
-        width='100%'
-        position="sticky"
-        
-        >
-          <IconButton
-          
-          >
-          <img 
-          src={Menu}
-          
-          />
-          </IconButton>
-        </Box>
-      <header className="App-header">
+    <Box
+      backgroundColor='#FF3333'
+      height='100vh'
+    >
+      <NavBar />
+      <Stack
+        sx={{
+          backgroundColor: '#FF3333',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          color: 'white',
+
+        }}
+      >
         <img
           src={Title}
           style={{
@@ -72,8 +69,8 @@ const Home = () => {
           />
         </Link>
 
-      </header>
-    </div>
+      </Stack>
+    </Box >
 
 
   )

@@ -69,7 +69,7 @@ const Home = () => {
           }}
         />
         <Link
-          to='./HooksGame'
+          to='./Hooks_Game'
           style={{
             textDecoration: 'none',
           }}

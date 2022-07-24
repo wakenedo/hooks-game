@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import Ball from '../../assets/svg/basketball-svgrepo-com.svg'
-import NavBar from '../../components/NavBar'
+import { Box, Button, Typography, Stack } from '@mui/material'
 
-const HooksGame = ({toggle}) => {
+//Assets
+import Ball from '../../assets/svg/basketball-svgrepo-com.svg'
+
+//Components
+import NavBar from '../../components/NavBar'
+import SideBar from '../../components/SideBar'
+
+//InnerComponents
+import Title from './Title'
+
+const HooksGame = () => {
     const [backgroundColor, setBackgroundColor] = useState('#ffeb33')
-    const [marginTop, setMarginTop] = useState('298px')
+    const [marginTop, setMarginTop] = useState('320px')
     const [points, setPoints] = useState(0)
     const [array, setArray] = useState([])
     const [arrayOfPointsLog, setArrayOfPointsLog] = useState([])
@@ -92,9 +101,9 @@ const HooksGame = ({toggle}) => {
     }
     const marginTopHigh = () => {
         if (backgroundColor === '#ff3333') {
-            setMarginTop('298px')
-        } if (marginTop !== '288px') {
-            setMarginTop('288px')
+            setMarginTop('320px')
+        } if (marginTop !== '320px') {
+            setMarginTop('320px')
 
         }
         return marginTop
@@ -122,14 +131,14 @@ const HooksGame = ({toggle}) => {
                             console.log('_superWhack1',)
                         }
                         return true
-                         
-                        
+
+
                     }
-                     
+
                 }
-                
+
             }
-            
+
         }
 
 
@@ -571,13 +580,13 @@ const HooksGame = ({toggle}) => {
             if (i !== points) {
                 return points
             }
-            
+
             arr.map((point) => {
                 return point
             })
             arr.push(points.toString())
 
-            
+
             return arr[i]
         }
     }
@@ -625,121 +634,164 @@ const HooksGame = ({toggle}) => {
     console.log('Change background-color log:', backgroundColor,)
     console.log('pointsLog log:', pointsLog(),)
 
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    }
+
+
     return (
-        <>
-        <NavBar toggle={toggle}/>
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    width: '1200px',
-                    height: '600px',
-                    maxHeight: 'fit-content',
-                    backgroundColor: `${backgroundColor}`,
-                    margin: 'auto'
+        <Box
 
-                }}
-            >
-                <h1>
-                    Drop the ball - beta
-
-                </h1>
-
-                <button onClick={() => backgroundColorYellow(marginTopLow())}>Yellow!</button>
-                <button onClick={() => backgroundColorBlue(marginTopMid())}>Blue!</button>
-                <button onClick={() => backgroundColorRed(marginTopHigh())}>Red!</button>
+            justifyContent='center'
+        >
+            <NavBar toggle={toggle} />
+            <SideBar isOpen={isOpen} toggle={toggle} />
+            <Box>
                 <div
-                    width="100%"
-                    height='100%'
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        width: '1200px',
+                        height: '600px',
+                        maxHeight: 'fit-content',
+                        backgroundColor: `${backgroundColor}`,
+                        margin: '20px auto'
 
-
+                    }}
                 >
-
-                    <img
-                        style={{
-                            marginTop: `${marginTop}`,
-                            transition: '0.2 ease-in-out',
+                    <Title />
+                    
+                    <Button
+                        onClick={() => backgroundColorYellow(marginTopLow())}
+                        sx={{
+                            color: '#000000',
+                            height: '20px',
+                            fontWeight: 'bold'
                         }}
-                        src={Ball}
-                        width={150}
-                        alt='ball'
-                    />
+                    >
+                        Yellow !
+                    </Button>
+                    <Button
+                        onClick={() => backgroundColorBlue(marginTopMid())}
+                        sx={{
+                            color: '#000000',
+                            height: '20px',
+                            fontWeight: 'bold'
+                        }}
+                    >
+                        Blue !
+                    </Button>
+                    <Button
+                        onClick={() => backgroundColorRed(marginTopHigh())}
+                        sx={{
+                            color: '#000000',
+                            height: '20px',
+                            fontWeight: 'bold'
+                        }}
+                    >
+                        Red !
+                    </Button>
+                    <div
+                        width="100%"
+                        height='100%'
+                    >
 
+                        <img
+                            style={{
+                                marginTop: `${marginTop}`,
+                                transition: '0.2 ease-in-out',
+                                marginLeft: '520px'
+                            }}
+                            src={Ball}
+                            width={150}
+                            alt='ball'
+                        />
+
+                    </div>
                 </div>
-            </div>
-            <h4>Points : {points}</h4>
-            <h6>Background Color : {backgroundColor}</h6>
-            
-            
-            <div
-            style={{
-                display: 'flex',
-                
-
-            }}
+            </Box>
+            <Typography
+                variant='h5'
+                textAlign="center"
             >
+                Points : {points}
+            </Typography>
+            <Typography
+                variant='h6'
+                textAlign="center"
+            >
+                Background Color : {backgroundColor}
+            </Typography>
 
-            
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    width: '200px',
-                    height: '250px',
-                    maxHeight: 'fit-content',
-                    backgroundColor: '#414141',
-                    marginLeft: 'auto',
-                    marginRight: '2px',
-                    borderRadius: '5px',
+            <Box>
+                        <Stack
+                            direction='column'
+                        >
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    width: '200px',
+                                    height: '250px',
+                                    maxHeight: 'fit-content',
+                                    backgroundColor: '#414141',
+
+                                    borderRadius: '5px',
+                                }}>
+                                <Typography
+                                    textAlign='center'
+                                    margin='4px auto'
+                                    sx={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                    }}
+                                >
+                                    Combo Logs:
+
+                                    <Typography>
+                                        {pointsLog()}
+                                    </Typography>
+
+                                </Typography>
+
+                            </Box>
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    width: '200px',
+                                    height: '250px',
+                                    maxHeight: 'fit-content',
+                                    backgroundColor: '#B2B2B2',
+
+                                    borderRadius: '5px',
 
 
-                }}>
-                <h6
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                    }}
-                >
-                    Combo Logs:
-                    
-                    <p>
-                        {pointsLog()}
-                    </p>
+                                }}>
+                                <Typography
+                                    textAlign='center'
+                                    margin='4px auto'
+                                    sx={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                    }}
+                                >
+                                    Points Log:
 
-                </h6>
+                                    <Typography>
+                                        {pointsLog()}
+                                    </Typography>
 
-            </div>
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    width: '200px',
-                    height: '250px',
-                    maxHeight: 'fit-content',
-                    backgroundColor: '#B2B2B2',
-                    marginRight: 'auto',
-                    marginLeft: '2px',
-                    borderRadius: '5px',
+                                </Typography>
 
+                            </Box>
+                        </Stack>
+                    </Box>                            
 
-                }}>
-                <h6
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                    }}
-                >
-                    Points Log:
-                    
-                    <p>
-                        {pointsLog()}
-                    </p>
-
-                </h6>
-
-            </div>
-            </div>
-        </>
+        </Box>
     )
 }
 

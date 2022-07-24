@@ -16,12 +16,12 @@ function App() {
   return (
     <div className="App">
      <Routes >
-        <Route path='/Hooks_Game' element={<HooksGame />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path='/How_To_Play' element={<HowToPlay />} />
         <Route path='/Road_Map' element={<RoadMap />} />
         <Route path='/About' element={<AboutTheProject />} />
         <Route path='/Combo_List' element={<ComboList />} />
+        <Route path='/Hooks_Game' element={<HooksGame />} />
         <Route path='/Donate' element={<Donate />} />
         <Route path='/' element={<Home />} />
       </Routes>

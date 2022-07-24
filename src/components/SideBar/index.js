@@ -47,7 +47,7 @@ const SideBar = ({isOpen, toggle}) => {
                         width={25}
                         src={BallIcon} />
                     <Link
-                        to='/'
+                        to='/AboutTheProject'
                         textDecoration='none'
                     >
                         <Typography

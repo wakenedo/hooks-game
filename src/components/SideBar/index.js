@@ -26,8 +26,7 @@ const SideBar = ({isOpen, toggle}) => {
                 bottom: '0',
                 right: '0',
                 transition: '0.5s ease-in-out',
-                right: isOpen ? '0' : '-1000px'
-                //right: {${({ isOpen }) => (isOpen ? '0' : '-1000px')}}
+                right: isOpen ? '0' : '-1000px'               
             }}
         >
             <Box

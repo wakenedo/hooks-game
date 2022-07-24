@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Ball from '../../assets/svg/basketball-svgrepo-com.svg'
 import NavBar from '../../components/NavBar'
 
-const HooksGame = () => {
+const HooksGame = ({toggle}) => {
     const [backgroundColor, setBackgroundColor] = useState('#ffeb33')
     const [marginTop, setMarginTop] = useState('298px')
     const [points, setPoints] = useState(0)
@@ -627,7 +627,7 @@ const HooksGame = () => {
 
     return (
         <>
-        <NavBar />
+        <NavBar toggle={toggle}/>
             <div
                 style={{
                     display: 'flex',

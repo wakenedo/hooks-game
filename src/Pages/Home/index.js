@@ -17,13 +17,11 @@ import SideBar from '../../components/SideBar';
 
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   }
-
-  console.log(toggle, isOpen)
 
   return (
 
@@ -44,6 +42,7 @@ const Home = () => {
         }}
       >
         <img
+          alt='title'
           src={Title}
           style={{
             marginBottom: 25,
@@ -62,7 +61,7 @@ const Home = () => {
           version 1.0.0
         </Typography>
         <img
-          src={Ball} className="App-logo" alt="Drop the ball"
+          src={Ball} alt="Drop the ball"
           style={{
             width: 300,
             marginBottom: 95,
@@ -76,6 +75,7 @@ const Home = () => {
           }}
         >
           <img
+            alt='play'
             src={Play}
             style={{
 

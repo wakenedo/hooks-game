@@ -12,6 +12,7 @@ const NavBar = ({toggle}) => {
             sx={{
                 justifyContent:'right',
                 right: '0',
+                top: '0'
             }}
 
         >

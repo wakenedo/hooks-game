@@ -24,8 +24,7 @@ const SideBar = ({isOpen, toggle}) => {
                 borderTop: '1px solid #282C34',
                 alignItems: 'center',
                 bottom: '0',
-                right: '0',
-                transition: '0.5s ease-in-out',
+                transition: '0.75s ease-in-out',
                 right: isOpen ? '0' : '-1000px'               
             }}
         >
@@ -44,7 +43,7 @@ const SideBar = ({isOpen, toggle}) => {
                     justifyContent='space-around'
                 >
                     <img
-                        
+                        alt='ball-icon'
                         width={25}
                         src={BallIcon} />
                     <Link
@@ -68,7 +67,7 @@ const SideBar = ({isOpen, toggle}) => {
                     justifyContent='space-between'
                 >
                     <img
-                        
+                        alt='ball-icon'
                         width={25}
                         src={BallIcon} />
                     <Link
@@ -91,7 +90,7 @@ const SideBar = ({isOpen, toggle}) => {
                     justifyContent='space-between'
                 >
                     <img
-                        
+                        alt='ball-icon'
                         width={25}
                         src={BallIcon} />
                     <Link
@@ -114,7 +113,7 @@ const SideBar = ({isOpen, toggle}) => {
                     justifyContent='space-between'
                 >
                     <img
-                        
+                        alt='ball-icon'
                         width={25}
                         src={BallIcon} />
                     <Link
@@ -137,11 +136,11 @@ const SideBar = ({isOpen, toggle}) => {
                     justifyContent='space-between'
                 >
                     <img
-                        
+                        alt='ball-icon'
                         width={25}
                         src={BallIcon} />
                     <Link
-                        to='/'
+                        to='/Contact'
                     >
                         <Typography
                         color='#282C34'
@@ -160,7 +159,7 @@ const SideBar = ({isOpen, toggle}) => {
                     justifyContent='space-between'
                 >
                     <img
-                        
+                        alt='ball-icon'
                         width={25}
                         src={BallIcon} />
                     <Link

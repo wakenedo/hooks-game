@@ -47,7 +47,7 @@ const SideBar = ({isOpen, toggle}) => {
                         width={25}
                         src={BallIcon} />
                     <Link
-                        to='/AboutTheProject'
+                        to='/About'
                         textDecoration='none'
                     >
                         <Typography
@@ -71,7 +71,7 @@ const SideBar = ({isOpen, toggle}) => {
                         width={25}
                         src={BallIcon} />
                     <Link
-                        to='/'
+                        to='/Road_Map'
                     >
                         <Typography
                         color='#282C34'
@@ -94,7 +94,7 @@ const SideBar = ({isOpen, toggle}) => {
                         width={25}
                         src={BallIcon} />
                     <Link
-                        to='/'
+                        to='/How_To_Play'
                     >
                         <Typography
                         color='#282C34'
@@ -117,14 +117,14 @@ const SideBar = ({isOpen, toggle}) => {
                         width={25}
                         src={BallIcon} />
                     <Link
-                        to='/'
+                        to='/Combo_List'
                     >
                         <Typography
                         color='#282C34'
                         fontWeight='bold'
                         fontSize='18px'
                         >
-                            Combos
+                            Combo List
                         </Typography>
                     </Link>
                 </Box>
@@ -163,7 +163,7 @@ const SideBar = ({isOpen, toggle}) => {
                         width={25}
                         src={BallIcon} />
                     <Link
-                        to='/'
+                        to='/Donate'
                     >
                         <Typography
                         color='#282C34'

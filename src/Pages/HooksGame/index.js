@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Ball from '../../assets/svg/basketball-svgrepo-com.svg'
+import NavBar from '../../components/NavBar'
 
 const HooksGame = () => {
     const [backgroundColor, setBackgroundColor] = useState('#ffeb33')
@@ -626,6 +627,7 @@ const HooksGame = () => {
 
     return (
         <>
+        <NavBar />
             <div
                 style={{
                     display: 'flex',

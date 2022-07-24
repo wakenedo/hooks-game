@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, IconButton } from '@mui/material'
 import Menu from '../../assets/Nav/NavOpenButton.png'
-const NavBar = () => {
+const NavBar = ({toggle}) => {
     return (
         <Box
             backgroundColor='#FF3333'
@@ -16,6 +16,7 @@ const NavBar = () => {
 
         >
             <IconButton
+            onClick={toggle}
             sx={{
                 borderRadius: '0',
                 width: 'fit-content'

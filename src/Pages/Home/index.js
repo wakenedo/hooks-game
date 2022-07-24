@@ -1,22 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+
+
+//Assets
 import Ball from '../../assets/svg/basketball-svgrepo-com.svg'
 import Title from '../../assets/Home/DropTheBall.png'
 import Play from '../../assets/Home/Play.png'
 
+//MaterialUi
 import { Typography, Box, Stack } from '@mui/material'
+
+//Components
 import NavBar from '../../components/NavBar';
+import SideBar from '../../components/SideBar';
 
 
 
 const Home = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  }
+
+  console.log(toggle, isOpen)
+
   return (
 
     <Box
       backgroundColor='#FF3333'
       height='100vh'
     >
-      <NavBar />
+      <NavBar toggle={toggle} />
+      <SideBar isOpen={isOpen} toggle={toggle} />
       <Stack
         sx={{
           backgroundColor: '#FF3333',

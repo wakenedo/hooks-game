@@ -10,7 +10,7 @@ const TextBottom = () => {
                 marginTop='45px'
                 marginLeft='20px'
                 fontSize='33px'
-                color='#FFFF'
+                color='#282C34'
                 letterSpacing={5}
             >
                 The most important , have fun !
@@ -19,7 +19,7 @@ const TextBottom = () => {
                 marginTop='15px'
                 marginLeft='20px'
                 fontSize='14.5px'
-                color='#FFFF'
+                color='#282C34'
                 letterSpacing={5}
                 maxWidth='735px'
                 textAlign='justify'

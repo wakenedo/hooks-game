@@ -28,76 +28,81 @@ const HowToPlay = () => {
     return (
         <Box
             backgroundColor='#FF3333'
-            height='520px'
+            height='1600px'
         >
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />
-            <DropTheBallLogo />
-            <Box
-            marginBottom='40px'
-            >
-
-            <Typography
-                marginTop='15px'
-                marginLeft='20px'
-                margin='20px'
-                fontSize='44px'
-                fontWeight='bold'
-                color='#FFFF'
-                letterSpacing={5}
-            >
-                How to Play
-            </Typography>
-            </Box>
-            <HowToPlayTopText />
-            <Box
-                backgroundColor='#FFEB33'
-                marginTop='65px'
-
-            >
-                <Stack
-                    marginLeft='550px'
-                >
-                    <Box
+            <Box>
+                <DropTheBallLogo />
+                <Box>
+                    <Typography
+                        marginTop='15px'
+                        marginLeft='20px'
+                        margin='20px'
+                        fontSize='44px'
+                        fontWeight='bold'
+                        color='#FFFF'
+                        letterSpacing={5}
+                    >
+                        How to Play
+                    </Typography>
+                </Box>
+                <HowToPlayTopText />
+                <Box
+                    width='100%'
+                    height='25px'
+                    backgroundColor='#ffff'
                     marginTop='45px'
+                >
+
+                </Box>
+                <Box
+                    backgroundColor='#3388FF'
+                >
+                    <Stack
+                        marginLeft='550px'
+                    >
+                        <Box
+                            marginTop='45px'
+                            paddingTop='45px'
+                        >
+                            <HowToPlay1 />
+                        </Box>
+                        <Box>
+                            <HowToPlay2 />
+                        </Box>
+                        <Box
+                            marginBottom='45px'
+                            paddingBottom='45px'
+                        >
+                            <HowToPlay3 />
+                        </Box>
+                    </Stack>
+                </Box>
+                <Stack
+                    backgroundColor='#ffeb33'
+                    direction='row'
+                    height='550px'
+                    marginTop='25px'
                     paddingTop='45px'
-                    >
-                        <HowToPlay1 />
-                    </Box>
-                    <Box>
-                        <HowToPlay2 />
-                    </Box>
+                >
+                    <HaveFun />
                     <Box
-                    marginBottom='45px'
-                    paddingBottom='45px'
+                        marginLeft='252px'
+                        marginTop='55px'
+
                     >
-                        <HowToPlay3 />
+                        <img
+                            alt='havefun-gif'
+                            src={HaveFunGif}
+                            style={{
+                                width: '380px'
+                            }}
+                        />
+
                     </Box>
                 </Stack>
             </Box>
-            <Stack
-            backgroundColor='#3388FF' 
-            direction='row' 
-            height='550px'
-            marginTop='25px'
-            paddingTop='45px'
-            >
-                <HaveFun />
-                        <Box
-                           marginLeft='252px'
-                           marginTop='55px'
-                           
-                        >
-                            <img
-                                alt='havefun-gif'
-                                src={HaveFunGif}
-                                style={{
-                                    width: '380px'
-                                }}
-                            />
-
-                        </Box>
-                    </Stack>
         </Box>
     )
 }

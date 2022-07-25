@@ -4,11 +4,12 @@ import Menu from '../../assets/Nav/NavOpenButton.png'
 const NavBar = ({toggle}) => {
     return (
         <Box
-            backgroundColor='#FF3333'
+            backgroundColor='transparent'
             height='fit-content'
             width='100%'
             position="sticky"
             display='flex'
+            z-index='999'
             sx={{
                 justifyContent:'right',
                 right: '0',

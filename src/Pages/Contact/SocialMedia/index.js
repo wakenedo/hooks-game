@@ -23,7 +23,7 @@ const SocialMedia = () => {
                     display='flex'
                 >
                     <Box
-                        
+
                     >
                         <Stack
                             direction='column'
@@ -142,7 +142,7 @@ const SocialMedia = () => {
                                         Discord:
                                     </Typography>
                                     <Link to=''>
-                                        @wakenedo
+                                        @wakenedo#7627
                                     </Link>
                                 </Typography>
                             </Box>

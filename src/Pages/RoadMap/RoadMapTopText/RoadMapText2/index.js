@@ -9,7 +9,7 @@ const TextBottom = () => {
         marginRight='90px'
         >
             <Typography
-                marginTop='45px'
+                
                 marginLeft='20px'
                 fontSize='33px'
                 color='#ffff'

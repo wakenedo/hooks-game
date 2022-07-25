@@ -59,7 +59,7 @@ const Home = () => {
             }
           }}
         >
-          version 1.0.0
+          version Beta
         </Typography>
         <img
           src={Ball} alt="Drop the ball"

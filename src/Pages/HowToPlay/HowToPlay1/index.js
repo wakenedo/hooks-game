@@ -5,11 +5,11 @@ import HowToPlay1Image from '../../../assets/HowToPlay/HowToPlay1.png'
 
 const HowToPlay1 = () => {
     return (
-        <Link to='/'>
+        <>
             <img 
             width='420px'
             alt='HowToPlay1' src={HowToPlay1Image} />
-        </Link>
+        </>
     )
 }
 

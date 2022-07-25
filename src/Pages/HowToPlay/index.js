@@ -28,7 +28,7 @@ const HowToPlay = () => {
     return (
         <Box
             backgroundColor='#FF3333'
-            height='1600px'
+            height='1500px'
         >
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />

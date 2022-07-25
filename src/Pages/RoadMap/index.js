@@ -1,10 +1,19 @@
-import React,{ useState } from 'react';
-import { Box, Typography } from '@mui/material'
+import React, { useState } from 'react';
+import { Box, Typography, Stack } from '@mui/material'
 
 //Components
 import NavBar from '../../components/NavBar';
 import SideBar from '../../components/SideBar';
 import DropTheBallLogo from '../../components/DropTheBallLogo';
+
+//Inner Components
+import RoadMapTopText from './RoadMapTopText';
+import RoadMap3 from './RoadMapTopText/RoadMap3';
+import RoadMap2 from './RoadMapTopText/RoadMap2';
+import RoadMap1 from './RoadMapTopText/RoadMap1';
+import RoadMapText1 from './RoadMapTopText/RoadMapText1';
+import RoadMapText2 from './RoadMapTopText/RoadMapText2';
+import RoadMapText3 from './RoadMapTopText/RoadMapText3';
 
 const RoadMap = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,13 +21,13 @@ const RoadMap = () => {
     const toggle = () => {
         setIsOpen(!isOpen);
     }
-    
-    window.scrollTo({ top: 0, left: 100, behavior: 'smooth' });
+
+    window.scrollTo({ top: 3500, left: 100, behavior: 'smooth' });
 
     return (
         <Box
             backgroundColor='#FF3333'
-            height='1080px'
+            height='2810px'
         >
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />
@@ -33,6 +42,51 @@ const RoadMap = () => {
             >
                 Road Map
             </Typography>
+            <RoadMapTopText />
+            <Box
+                marginLeft='20px'
+                marginTop='45px'
+            >
+                <Stack>
+                    <Stack
+                        direction='row'
+                        marginTop='45px'
+                        marginBottom='45px'
+
+                    >
+                        <Box>
+                            <RoadMap3 />
+                        </Box>
+                        <Box>
+                            <RoadMapText3 />
+                        </Box>
+                    </Stack>
+                    <Stack
+                        direction='row'
+                        marginTop='45px'
+                        marginBottom='45px'
+                    >
+                        <Box>
+                            <RoadMapText2 />
+                        </Box>
+                        <Box>
+                            <RoadMap2 />
+                        </Box>
+                    </Stack>
+                    <Stack
+                        direction='row'
+                        marginTop='45px'
+                        marginBottom='45px'
+                    >
+                        <Box>
+                            <RoadMap1 />
+                        </Box>
+                        <Box>
+                            <RoadMapText1 />
+                        </Box>
+                    </Stack>
+                </Stack>
+            </Box>
         </Box>
     )
 }

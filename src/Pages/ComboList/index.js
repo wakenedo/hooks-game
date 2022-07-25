@@ -8,7 +8,7 @@ import DropTheBallLogo from '../../components/DropTheBallLogo';
 
 //Inner Components
 import ExplanationCombo from './ExplanationCombo';
-import _ComboList from './_ComboList';
+import Combos from './Combos';
 
 const ComboList = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +52,7 @@ const ComboList = () => {
                 <Box
                 marginLeft='20px'
                 >
-                    <_ComboList />
+                    <Combos />
                 </Box>
 
             </Box>

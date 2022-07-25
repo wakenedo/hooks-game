@@ -26,6 +26,7 @@ const NavBar = ({toggle}) => {
                 
             >
                 <img
+                    alt='menu'
                     src={Menu}
 
                 />

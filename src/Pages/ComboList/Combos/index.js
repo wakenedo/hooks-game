@@ -7,7 +7,7 @@ import ComboLeft from '../../../assets/ComboLeft.png'
 
 
 
-const _ComboList = () => {
+const Combos = () => {
     return (
         <>
             <Typography
@@ -45,4 +45,4 @@ const _ComboList = () => {
     )
 }
 
-export default _ComboList
+export default Combos

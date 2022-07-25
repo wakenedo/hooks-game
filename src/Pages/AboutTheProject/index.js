@@ -87,7 +87,7 @@ const AboutTheProject = () => {
                         marginLeft='125px'
                     >
                         <img
-                            alt='image-mid'
+                            alt='mid-content'
                             src={LightBulb}
                         />
                     </Box>

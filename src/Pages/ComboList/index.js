@@ -16,6 +16,9 @@ const ComboList = () => {
     const toggle = () => {
         setIsOpen(!isOpen);
     }
+
+    window.scrollTo({ top: 0, left: 100, behavior: 'smooth' });
+    
     return (
         <Box
             backgroundColor='#FF3333'

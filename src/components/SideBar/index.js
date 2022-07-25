@@ -7,7 +7,7 @@ import BallIcon from '../../assets/svg/ball-svgrepo-com.svg'
 
 const SideBar = ({isOpen, toggle}) => {
     
-
+    
 
     return (
         <Stack 
@@ -50,6 +50,7 @@ const SideBar = ({isOpen, toggle}) => {
                         to='/About'
                         textDecoration='none'
                     >
+                        
                         <Typography
                         color='#282C34'
                         fontWeight='bold'

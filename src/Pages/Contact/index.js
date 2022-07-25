@@ -9,6 +9,8 @@ import texts from '../../constants/texts.jsx'
 import NavBar from '../../components/NavBar';
 import SideBar from '../../components/SideBar';
 import DropTheBallLogo from '../../components/DropTheBallLogo';
+
+//Inner Components
 import ContactCreator from './ContactCreator/index.js';
 import SocialMedia from './SocialMedia/index.js';
 import EmailUs from './EmailUs/index.js';

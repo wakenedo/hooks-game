@@ -17,17 +17,17 @@ import RoadMapText3 from './RoadMapTopText/RoadMapText3';
 
 const RoadMap = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    
     const toggle = () => {
         setIsOpen(!isOpen);
     }
-
-    window.scrollTo({ top: 3500, left: 100, behavior: 'smooth' });
-
+    
+    
+    window.scrollTo({ top: 1740, behavior: 'smooth' });
     return (
         <Box
             backgroundColor='#FF3333'
-            height='2840px'
+            height='2785px'
         >
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />

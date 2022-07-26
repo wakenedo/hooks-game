@@ -64,7 +64,7 @@ const Donate = () => {
             </Box>
             <Box
                 backgroundColor='#3388FF'
-                height='615px'
+                height='475px'
             >
                 <Box
                 marginLeft='20px'

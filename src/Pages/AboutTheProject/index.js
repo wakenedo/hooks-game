@@ -84,7 +84,7 @@ const AboutTheProject = () => {
                 <Stack direction='row'>
                     <TextMid />
                     <Box
-                        marginLeft='125px'
+                        marginLeft='115px'
                     >
                         <img
                             alt='mid-content'

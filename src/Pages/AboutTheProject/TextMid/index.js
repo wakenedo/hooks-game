@@ -22,10 +22,7 @@ const TextMid = () => {
                 maxWidth='855px'
                 textAlign='justify'
             >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit nunc sed nunc iaculis interdum. Suspendisse nisi dui, vestibulum vel ornare a, feugiat ut ligula. Vestibulum luctus at elit ut cursus.
-                Quisque luctus efficitur sollicitudin. Nulla fringilla nisl mi, sed consequat velit tincidunt vitae. Etiam quis cursus felis, at iaculis nulla. Aenean eget eleifend tortor. Etiam tristique velit et fermentum aliquet. Vivamus eget magna viverra, cursus risus ac, interdum purus.
-                Curabitur semper imperdiet consequat. Integer gravida tellus neque, ac vehicula nisl maximus in. Vestibulum vitae risus neque.Quisque rutrum tellus id eros varius sagittis. Praesent malesuada justo quis dui porta lacinia. Aliquam rhoncus felis sit amet interdum dignissim. Morbi iaculis cursus risus et faucibus.
-                Ut mattis arcu sed placerat maximus. Nam mollis, risus ac pellentesque faucibus, felis leo mattis orci, in porta diam nunc in mauris. Curabitur et quam non ligula placerat tempus. Sed interdum arcu sit amet odio sagittis, nec auctor purus faucibus.
+                Inspiration, is a call, something you cannot dismiss that easy. And as the statement above says, this is a project of inspiration. Something that gradually came into fruition. I was studying React Hooks and something pop into my mind, would it be possible to make a somewhat complex using only hooks? And basically only React? That came when I was coding the ball, first I thought of an animated svg, but then something clicked, I could make the ball moving using states, and also the points system and combo, so as I was thinking , I realized it was an inspiration, something I had to do, so I started to code the basics of the game, and then the site came into being, and it's been so much fun to develop this so far. So for me It is already a great experience.   
             </Typography>
         </Box>
     )

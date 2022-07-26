@@ -22,7 +22,7 @@ const ComboList = () => {
     return (
         <Box
             backgroundColor='#FF3333'
-            height='540px'
+            height='475px'
         >
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />

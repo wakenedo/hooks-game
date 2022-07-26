@@ -9,7 +9,7 @@ const TextLow = () => {
                 paddingTop='45px'
                 marginLeft='20px'
                 fontSize='33px'
-                color='#FFFF'
+                color='#282C34'
                 letterSpacing={5}
             >
                 What now ?
@@ -18,15 +18,12 @@ const TextLow = () => {
                 marginTop='15px'
                 marginLeft='20px'
                 fontSize='14.5px'
-                color='#FFFF'
+                color='#282C34'
                 letterSpacing={5}
-                maxWidth='1542px'
+                maxWidth='1510px'
                 textAlign='justify'
             >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit nunc sed nunc iaculis interdum. Suspendisse nisi dui, vestibulum vel ornare a, feugiat ut ligula. Vestibulum luctus at elit ut cursus.
-                Quisque luctus efficitur sollicitudin. Nulla fringilla nisl mi, sed consequat velit tincidunt vitae. Etiam quis cursus felis, at iaculis nulla. Aenean eget eleifend tortor. Etiam tristique velit et fermentum aliquet. Vivamus eget magna viverra, cursus risus ac, interdum purus.
-                Curabitur semper imperdiet consequat. Integer gravida tellus neque, ac vehicula nisl maximus in. Vestibulum vitae risus neque.Quisque rutrum tellus id eros varius sagittis. Praesent malesuada justo quis dui porta lacinia. Aliquam rhoncus felis sit amet interdum dignissim. Morbi iaculis cursus risus et faucibus.
-                Ut mattis arcu sed placerat maximus. Nam mollis, risus ac pellentesque faucibus, felis leo mattis orci, in porta diam nunc in mauris. Curabitur et quam non ligula placerat tempus. Sed interdum arcu sit amet odio sagittis, nec auctor purus faucibus.
+                So yes, Im doing this right now, Im very excited and happy to be doing it, and that's enough. Sometimes we just let opportunities pass through, and we will never know what could happen. This time I did not want to sit idle and do nothing. I have set a road map to better define phases and what each step of it will add to this experience, it will probably take a lot of time to complete the project and if there is no community or interest on it will take much longer since it will be only me working on it and I do have a full time job. And if there is enough interest I can assemble a team of developers to speed up the whole process and also fully dedicate my time to this project. When I was thinking about this project I also thought how cool would it be to create a npm-package with the regular version of so you could boot it up on your React project and have people playing it on your website or project? I thought it would be very fun, so that's a side plan, that will depend on the level of success. 
             </Typography>
         </>
     )

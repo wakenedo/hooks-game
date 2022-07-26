@@ -1,12 +1,22 @@
-import React from 'react'
-import { Typography, Box, Input, Stack, TextField,TextareaAutosize, Button } from '@mui/material'
+import React, { useState } from 'react'
+import { Typography, Box, Input, Stack, TextField, TextareaAutosize, Button } from '@mui/material'
 
 
 
 
 
 const EmailUs = () => {
- 
+  const [title, setTitle] = useState('')
+  const [matter, setMatter] = useState('')
+  const [body, setBody] = useState('')
+
+  function handleSubmit(event) {
+    
+    console.log('Title:', title, 'Matter: ', matter, 'body', body);
+    
+    // ..code to submit form to backend here...
+
+  }
 
   return (
     <>
@@ -47,6 +57,7 @@ const EmailUs = () => {
             >
               <TextField
                 placeholder='Title...'
+                onInput={e => setTitle(e.target.value)}
                 sx={{
                   width: '700px',
                   backgroundColor: '#FFFF',
@@ -70,6 +81,7 @@ const EmailUs = () => {
             >
               <TextField
                 placeholder='Matter...'
+                onInput={e => setMatter(e.target.value)}
                 sx={{
                   width: '700px',
                   backgroundColor: '#FFFF',
@@ -92,6 +104,7 @@ const EmailUs = () => {
             marginTop='30px'
           >
             <Button
+            onClick={() => handleSubmit()}
               variant='contained'
               sx={{
                 backgroundColor: '#5A3392',
@@ -125,9 +138,10 @@ const EmailUs = () => {
             E-mail Body :
           </Typography>
           <Box
-          width='765px'
+            width='765px'
           >
             <TextareaAutosize
+              onInput={e => setBody(e.target.value)}
               minRows={18.5}
               maxRows={18.5}
               cols={105}

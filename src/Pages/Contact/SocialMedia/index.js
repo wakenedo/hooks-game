@@ -53,7 +53,13 @@ const SocialMedia = () => {
                                     >
                                         GitHub:
                                     </Typography>
-                                    <Link to=''>
+                                    <Link 
+                                    to=''
+                                    style={{
+                                        textDecoration:'none',
+                                        color:'#FFFFFF'
+                                    }}
+                                    >
                                         @wakenedo
                                     </Link>
                                 </Typography>
@@ -78,7 +84,13 @@ const SocialMedia = () => {
                                     >
                                         LinkedIn:
                                     </Typography>
-                                    <Link to=''>
+                                    <Link 
+                                    to=''
+                                    style={{
+                                        textDecoration:'none',
+                                        color:'#FFFFFF'
+                                    }}
+                                    >
                                         @alexandre-alvarenga-developer
                                     </Link>
                                 </Typography>
@@ -103,7 +115,13 @@ const SocialMedia = () => {
                                     >
                                         Figma:
                                     </Typography>
-                                    <Link to=''>
+                                    <Link 
+                                    to=''
+                                    style={{
+                                        textDecoration:'none',
+                                        color:'#FFFFFF'
+                                    }}
+                                    >
                                         @wakenedo
                                     </Link>
                                 </Typography>
@@ -141,7 +159,13 @@ const SocialMedia = () => {
                                     >
                                         Discord:
                                     </Typography>
-                                    <Link to=''>
+                                    <Link 
+                                    to=''
+                                    style={{
+                                        textDecoration:'none',
+                                        color:'#FFFFFF'
+                                    }}
+                                    >
                                         @wakenedo
                                     </Link>
                                 </Typography>

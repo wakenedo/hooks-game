@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 //MaterialUi
 import { Stack, Box, Typography } from '@mui/material'
@@ -6,7 +6,11 @@ import { Stack, Box, Typography } from '@mui/material'
 import BallIcon from '../../assets/svg/ball-svgrepo-com.svg'
 
 const SideBar = ({isOpen, toggle}) => {
+    const [active, setActive] = useState(false)
     
+    const hover = () => {
+        setActive(true);
+      }
     
 
     return (
@@ -41,20 +45,30 @@ const SideBar = ({isOpen, toggle}) => {
                     margin='25px auto 13px'
                     width={255}
                     justifyContent='space-around'
+                    
                 >
                     <img
                         alt='ball-icon'
                         width={25}
-                        src={BallIcon} />
+                        src={BallIcon} 
+                        />
+                        
                     <Link
                         to='/About'
-                        textDecoration='none'
+                        style={{
+                            textDecoration:'none'
+                        }}
                     >
                         
                         <Typography
                         color='#282C34'
                         fontWeight='bold'
                         fontSize='18px'
+                        sx={{
+                            '&:hover': {
+                                color: '#282C34'
+                            }
+                        }}
                         >
                             About the Project
                         </Typography>
@@ -73,6 +87,9 @@ const SideBar = ({isOpen, toggle}) => {
                         src={BallIcon} />
                     <Link
                         to='/Road_Map'
+                        style={{
+                            textDecoration:'none'
+                        }}
                     >
                         <Typography
                         color='#282C34'
@@ -96,6 +113,9 @@ const SideBar = ({isOpen, toggle}) => {
                         src={BallIcon} />
                     <Link
                         to='/How_To_Play'
+                        style={{
+                            textDecoration:'none'
+                        }}
                     >
                         <Typography
                         color='#282C34'
@@ -119,6 +139,9 @@ const SideBar = ({isOpen, toggle}) => {
                         src={BallIcon} />
                     <Link
                         to='/Combo_List'
+                        style={{
+                            textDecoration:'none'
+                        }}
                     >
                         <Typography
                         color='#282C34'
@@ -142,6 +165,9 @@ const SideBar = ({isOpen, toggle}) => {
                         src={BallIcon} />
                     <Link
                         to='/Contact'
+                        style={{
+                            textDecoration:'none'
+                        }}
                     >
                         <Typography
                         color='#282C34'
@@ -165,6 +191,9 @@ const SideBar = ({isOpen, toggle}) => {
                         src={BallIcon} />
                     <Link
                         to='/Donate'
+                        style={{
+                            textDecoration:'none'
+                        }}
                     >
                         <Typography
                         color='#282C34'

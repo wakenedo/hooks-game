@@ -5,7 +5,7 @@ const TextTop = () => {
     return (
         <>
             <Typography
-                marginLeft='20px'
+                marginLeft='45px'
                 fontSize='33px'
                 color='#FFFF'
                 letterSpacing={5}
@@ -14,17 +14,14 @@ const TextTop = () => {
             </Typography>
             <Typography
                 marginTop='15px'
-                marginLeft='20px'
+                marginLeft='45px'
                 fontSize='14.5px'
                 color='#FFFF'
                 letterSpacing={5}
-                maxWidth='835px'
+                maxWidth='785px'
                 textAlign='justify'
             >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit nunc sed nunc iaculis interdum. Suspendisse nisi dui, vestibulum vel ornare a, feugiat ut ligula. Vestibulum luctus at elit ut cursus.
-                Quisque luctus efficitur sollicitudin. Nulla fringilla nisl mi, sed consequat velit tincidunt vitae. Etiam quis cursus felis, at iaculis nulla. Aenean eget eleifend tortor. Etiam tristique velit et fermentum aliquet. Vivamus eget magna viverra, cursus risus ac, interdum purus.
-                Curabitur semper imperdiet consequat. Integer gravida tellus neque, ac vehicula nisl maximus in. Vestibulum vitae risus neque.Quisque rutrum tellus id eros varius sagittis. Praesent malesuada justo quis dui porta lacinia. Aliquam rhoncus felis sit amet interdum dignissim. Morbi iaculis cursus risus et faucibus.
-                Ut mattis arcu sed placerat maximus. Nam mollis, risus ac pellentesque faucibus, felis leo mattis orci, in porta diam nunc in mauris. Curabitur et quam non ligula placerat tempus. Sed interdum arcu sit amet odio sagittis, nec auctor purus faucibus.
+                That’s a good question, no, a great question. You should think about that for 5 minutes. I don’t know about you people but for me I’ve never figured out. If you have, send me a DM. Humor aside, it’s true that there is also a bit of mystery behind our actions, why we choose the things we do, why we like them? Why the chocolate ice cream tastes better than vanilla? Because chocolate is better. Oh yes we were going with more serious tone here. The real question here is more why am I doing this, this project? Ok you got me, I’m kinda going with the flow, have you ever heard that one? I don’t really know for short answer, the long answer you probably don’t want to hear it, but since Im the one in charge here Im going to tell you right away, because I don’t f word know. But in the end yea, I wanna make a cool experience for everybody so they can meme about with their friends and have fun sharing their experience, that would be great indeed. So what are you waiting go to the Donations page and support the project. Ok that wasn’t necessary, first play the game, send feedback and if you think it’s a cool idea then considerate donating.
             </Typography>
         </>
     )

@@ -8,26 +8,23 @@ const TextBottom = () => {
         <Box>
             <Typography
                 marginTop='45px'
-                marginLeft='20px'
+                marginLeft='45px'
                 fontSize='33px'
-                color='#FFFF'
+                color='#282C34'
                 letterSpacing={5}
             >
                 That's it !
             </Typography>
             <Typography
                 marginTop='15px'
-                marginLeft='20px'
+                marginLeft='45px'
                 fontSize='14.5px'
-                color='#FFFF'
+                color='#282C34'
                 letterSpacing={5}
-                maxWidth='735px'
+                maxWidth='675px'
                 textAlign='justify'
             >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit nunc sed nunc iaculis interdum. Suspendisse nisi dui, vestibulum vel ornare a, feugiat ut ligula. Vestibulum luctus at elit ut cursus.
-                Quisque luctus efficitur sollicitudin. Nulla fringilla nisl mi, sed consequat velit tincidunt vitae. Etiam quis cursus felis, at iaculis nulla. Aenean eget eleifend tortor. Etiam tristique velit et fermentum aliquet. Vivamus eget magna viverra, cursus risus ac, interdum purus.
-                Curabitur semper imperdiet consequat. Integer gravida tellus neque, ac vehicula nisl maximus in. Vestibulum vitae risus neque.Quisque rutrum tellus id eros varius sagittis. Praesent malesuada justo quis dui porta lacinia. Aliquam rhoncus felis sit amet interdum dignissim. Morbi iaculis cursus risus et faucibus.
-                Ut mattis arcu sed placerat maximus. Nam mollis, risus ac pellentesque faucibus, felis leo mattis orci, in porta diam nunc in mauris. Curabitur et quam non ligula placerat tempus. Sed interdum arcu sit amet odio sagittis, nec auctor purus faucibus.
+               Let's wrap up here, so this is a passion project and a very crazy one, I am hoping to make a game using only react default hooks, and also a npm-package for react to go along with it. For now it's only maintained and developed by me, so any help is welcome, in any form, from feedback to donations. I assume that you did understand the whole intention of this project by the end of this page, I mean, you probably understand a little more about the spirit behind it, but if you're looking for more a technical description there is Road Map page to explain with more details about the phases and implementations for each step of the game. I appreciate you're attention and I hope to see you around. And most important, go break some sweat and Drop The Ball   
             </Typography>
         </Box>
     )

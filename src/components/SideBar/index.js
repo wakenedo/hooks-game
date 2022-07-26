@@ -6,11 +6,12 @@ import { Stack, Box, Typography } from '@mui/material'
 import BallIcon from '../../assets/svg/ball-svgrepo-com.svg'
 
 const SideBar = ({isOpen, toggle}) => {
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState(true)
     
     const hover = () => {
-        setActive(true);
+        setActive(false);
       }
+      
     
 
     return (
@@ -47,10 +48,12 @@ const SideBar = ({isOpen, toggle}) => {
                     justifyContent='space-around'
                     
                 >
+                    
                     <img
                         alt='ball-icon'
                         width={25}
-                        src={BallIcon} 
+                        src={BallIcon}
+                        
                         />
                         
                     <Link
@@ -66,7 +69,7 @@ const SideBar = ({isOpen, toggle}) => {
                         fontSize='18px'
                         sx={{
                             '&:hover': {
-                                color: '#282C34'
+                                color: '#5A3392',
                             }
                         }}
                         >
@@ -95,6 +98,11 @@ const SideBar = ({isOpen, toggle}) => {
                         color='#282C34'
                         fontWeight='bold'
                         fontSize='18px'
+                        sx={{
+                            '&:hover': {
+                                color: '#5A3392',
+                            }
+                        }}
                         >
                             Road Map
                         </Typography>
@@ -121,6 +129,11 @@ const SideBar = ({isOpen, toggle}) => {
                         color='#282C34'
                         fontWeight='bold'
                         fontSize='18px'
+                        sx={{
+                            '&:hover': {
+                                color: '#5A3392',
+                            }
+                        }}
                         >
                             How to Play
                         </Typography>
@@ -136,7 +149,9 @@ const SideBar = ({isOpen, toggle}) => {
                     <img
                         alt='ball-icon'
                         width={25}
-                        src={BallIcon} />
+                        src={BallIcon} 
+                        
+                        />
                     <Link
                         to='/Combo_List'
                         style={{
@@ -147,6 +162,11 @@ const SideBar = ({isOpen, toggle}) => {
                         color='#282C34'
                         fontWeight='bold'
                         fontSize='18px'
+                        sx={{
+                            '&:hover': {
+                                color: '#5A3392',
+                            }
+                        }}
                         >
                             Combo List
                         </Typography>
@@ -173,6 +193,11 @@ const SideBar = ({isOpen, toggle}) => {
                         color='#282C34'
                         fontWeight='bold'
                         fontSize='18px'
+                        sx={{
+                            '&:hover': {
+                                color: '#5A3392',
+                            }
+                        }}
                         >
                             Contact
                         </Typography>
@@ -199,6 +224,11 @@ const SideBar = ({isOpen, toggle}) => {
                         color='#282C34'
                         fontWeight='bold'
                         fontSize='18px'
+                        sx={{
+                            '&:hover': {
+                                color: '#5A3392',
+                            }
+                        }}
                         >
                             Donate
                         </Typography>

@@ -30,7 +30,7 @@ const Contact = () => {
     return (
         <Box
             backgroundColor='#FF3333'
-            height='1080px'
+            height='1013px'
         >
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />

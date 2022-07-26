@@ -23,7 +23,7 @@ const RoadMap = () => {
     }
     
     
-    window.scrollTo({ top: 1740, behavior: 'smooth' });
+    window.scrollTo({ top: 1740, behavior: 'smooth'});
     return (
         <Box
             backgroundColor='#FF3333'

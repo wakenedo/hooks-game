@@ -17,7 +17,7 @@ const EmailUs = () => {
         color='#FFFF'
         letterSpacing={5}
       >
-        E-mail us
+        E-mail the project
       </Typography>
       <Box
         marginTop='20px'
@@ -84,7 +84,7 @@ const EmailUs = () => {
               color='#FFFF'
               marginTop='10px'
             >
-              If you have noticed a bug , have any sugestions, doubts or just want to send a feedback, please do send us an e-mail.
+              If you have noticed a bug , have any suggestions, doubts or just want to send a feedback, please do send the project an e-mail.
             </Typography>
           </Box>
           <Box

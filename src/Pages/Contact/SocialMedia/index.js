@@ -54,7 +54,7 @@ const SocialMedia = () => {
                                         GitHub:
                                     </Typography>
                                     <Link 
-                                    to=''
+                                    to='https://github.com/wakenedo'
                                     style={{
                                         textDecoration:'none',
                                         color:'#FFFFFF'
@@ -85,7 +85,7 @@ const SocialMedia = () => {
                                         LinkedIn:
                                     </Typography>
                                     <Link 
-                                    to=''
+                                    to='https://www.linkedin.com/in/alexandre-alvarenga-developer/'
                                     style={{
                                         textDecoration:'none',
                                         color:'#FFFFFF'
@@ -116,7 +116,7 @@ const SocialMedia = () => {
                                         Figma:
                                     </Typography>
                                     <Link 
-                                    to=''
+                                    to='https://www.figma.com/?fuid='
                                     style={{
                                         textDecoration:'none',
                                         color:'#FFFFFF'
@@ -160,7 +160,7 @@ const SocialMedia = () => {
                                         Discord:
                                     </Typography>
                                     <Link 
-                                    to=''
+                                    to='https://discord.com/'
                                     style={{
                                         textDecoration:'none',
                                         color:'#FFFFFF'

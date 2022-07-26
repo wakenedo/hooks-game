@@ -21,10 +21,7 @@ const WhyDonate = () => {
                 maxWidth='895px'
                 textAlign='justify'
             >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit nunc sed nunc iaculis interdum. Suspendisse nisi dui, vestibulum vel ornare a, feugiat ut ligula. Vestibulum luctus at elit ut cursus.
-                Quisque luctus efficitur sollicitudin. Nulla fringilla nisl mi, sed consequat velit tincidunt vitae. Etiam quis cursus felis, at iaculis nulla. Aenean eget eleifend tortor. Etiam tristique velit et fermentum aliquet. Vivamus eget magna viverra, cursus risus ac, interdum purus.
-                Curabitur semper imperdiet consequat. Integer gravida tellus neque, ac vehicula nisl maximus in. Vestibulum vitae risus neque.Quisque rutrum tellus id eros varius sagittis. Praesent malesuada justo quis dui porta lacinia. Aliquam rhoncus felis sit amet interdum dignissim. Morbi iaculis cursus risus et faucibus.
-                Ut mattis arcu sed placerat maximus. Nam mollis, risus ac pellentesque faucibus, felis leo mattis orci, in porta diam nunc in mauris. Curabitur et quam non ligula placerat tempus. Sed interdum arcu sit amet odio sagittis, nec auctor purus faucibus.
+                With donations I can add more people to the project and increase the developing process overall, this is a love project, a complex game disguised as a simple click the buttons game. I know the triple A game market keep pushing the same kinds of games and mechanics for years, And even being the multi billion dollar industry that it is, players are bored, they’re tired of same old, same old. They feel that creativity is dead and gone to never come back. And we keep supporting those same companies over and over, so how about you instead of buying the next big title or the next early access game that promises everything, support a simple project with a simple goal, to create a fun game, an interesting game even with its simplistic game play and design, the regular version is in development still and this site will be launched with the game in its earliest versions for the regular mode, there are still features that will be implemented, check the Road Map page for more information about  Phases of the project, and if you decide it’s fair, then support us!
             </Typography>
         </>
     )

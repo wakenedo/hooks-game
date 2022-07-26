@@ -23,7 +23,7 @@ const SocialMedia = () => {
                     display='flex'
                 >
                     <Box
-                        
+
                     >
                         <Stack
                             direction='column'

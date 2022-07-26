@@ -1,10 +1,13 @@
 import React from 'react'
-import { Typography, Box, Input, Stack, TextField, Button } from '@mui/material'
+import { Typography, Box, Input, Stack, TextField,TextareaAutosize, Button } from '@mui/material'
+
 
 
 
 
 const EmailUs = () => {
+ 
+
   return (
     <>
       <Typography
@@ -119,15 +122,15 @@ const EmailUs = () => {
           <Typography
             color='#ffff'
           >
-            E-mail body :
+            E-mail Body :
           </Typography>
-          <Box>
-            <TextField
-              sx={{
-                width: '795px',
-                backgroundColor: '#FFFF',
-                multiline: true
-              }}
+          <Box
+          width='765px'
+          >
+            <TextareaAutosize
+              minRows={18.5}
+              maxRows={18.5}
+              cols={105}
             />
           </Box>
         </Box>

@@ -19,7 +19,7 @@ const RoadMapTopText = () => {
                 fontSize='14.5px'
                 color='#FFFF'
                 letterSpacing={5}
-                maxWidth='1565px'
+                maxWidth='1510px'
                 textAlign='justify'
             >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit nunc sed nunc iaculis interdum. Suspendisse nisi dui, vestibulum vel ornare a, feugiat ut ligula. Vestibulum luctus at elit ut cursus.

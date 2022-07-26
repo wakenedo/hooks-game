@@ -4,23 +4,21 @@ import { Typography, Box } from '@mui/material'
 const RoadMapText3 = () => {
     return (
         <Box
-        marginLeft='90px'
+        marginLeft='100px'
         >
-            <Typography
-                marginLeft='20px'
+            <Typography              
                 fontSize='33px'
                 color='#FFFF'
                 letterSpacing={5}
             >
-                Phase 3:
+                Phase 3
             </Typography>
             <Typography
                 marginTop='15px'
-                marginLeft='20px'
                 fontSize='14.5px'
                 color='#FFFF'
                 letterSpacing={5}
-                maxWidth='635px'
+                maxWidth='585px'
                 textAlign='justify'
             >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit nunc sed nunc iaculis interdum. Suspendisse nisi dui, vestibulum vel ornare a, feugiat ut ligula. Vestibulum luctus at elit ut cursus.

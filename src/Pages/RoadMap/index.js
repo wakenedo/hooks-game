@@ -27,7 +27,7 @@ const RoadMap = () => {
     return (
         <Box
             backgroundColor='#FF3333'
-            height='2810px'
+            height='2840px'
         >
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />

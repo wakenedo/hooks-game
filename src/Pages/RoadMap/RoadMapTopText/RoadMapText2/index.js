@@ -6,7 +6,7 @@ import { Box, Typography } from '@mui/material'
 const TextBottom = () => {
     return (
         <Box
-        marginRight='90px'
+        marginRight='75px'
         >
             <Typography
                 
@@ -15,7 +15,7 @@ const TextBottom = () => {
                 color='#ffff'
                 letterSpacing={5}
             >
-                Phase 2:
+                Phase 2
             </Typography>
             <Typography
                 marginTop='15px'
@@ -23,7 +23,7 @@ const TextBottom = () => {
                 fontSize='14.5px'
                 color='#ffff'
                 letterSpacing={5}
-                maxWidth='635px'
+                maxWidth='585px'
                 textAlign='justify'
             >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit nunc sed nunc iaculis interdum. Suspendisse nisi dui, vestibulum vel ornare a, feugiat ut ligula. Vestibulum luctus at elit ut cursus.

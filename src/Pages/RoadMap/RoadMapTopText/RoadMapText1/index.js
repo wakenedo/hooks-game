@@ -7,26 +7,21 @@ const RoadMapText1 = () => {
         marginLeft='90px'
         >
             <Typography
-                marginLeft='20px'
                 fontSize='33px'
                 color='#FFFF'
                 letterSpacing={5}
             >
-                Phase 1:
+                Phase 1
             </Typography>
             <Typography
                 marginTop='15px'
-                marginLeft='20px'
                 fontSize='14.5px'
                 color='#FFFF'
                 letterSpacing={5}
-                maxWidth='635px'
+                maxWidth='585px'
                 textAlign='justify'
             >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit nunc sed nunc iaculis interdum. Suspendisse nisi dui, vestibulum vel ornare a, feugiat ut ligula. Vestibulum luctus at elit ut cursus.
-                Quisque luctus efficitur sollicitudin. Nulla fringilla nisl mi, sed consequat velit tincidunt vitae. Etiam quis cursus felis, at iaculis nulla. Aenean eget eleifend tortor. Etiam tristique velit et fermentum aliquet. Vivamus eget magna viverra, cursus risus ac, interdum purus.
-                Curabitur semper imperdiet consequat. Integer gravida tellus neque, ac vehicula nisl maximus in. Vestibulum vitae risus neque.Quisque rutrum tellus id eros varius sagittis. Praesent malesuada justo quis dui porta lacinia. Aliquam rhoncus felis sit amet interdum dignissim. Morbi iaculis cursus risus et faucibus.
-                Ut mattis arcu sed placerat maximus. Nam mollis, risus ac pellentesque faucibus, felis leo mattis orci, in porta diam nunc in mauris. Curabitur et quam non ligula placerat tempus. Sed interdum arcu sit amet odio sagittis, nec auctor purus faucibus.
+                This phase is the building phase, which consists in setting up a foundation to the project, it will be the Regular Version of the game, once it's first version is complete the web site will go live. This is Alpha 1 step, when its working as intended the development of the Alpha 2 step will start, users will have user area were later they will be able to log in the game and check their achievements, invite friends, complete challenges, and more. This first user area will only display your name, e-mail and change password. Also in Alpha 2 there will be implemented GitHub and Google Auth. Alpha 3 will be added User Stats to User Page, where you will be able to check your membership, and other statistics for combos, balls dropped, click speed. Also the High Scores will be added to the User Page where will display your top 10 scores. By the end of Phase 1 the game will start to take shape, with a User Page set up, the foundations for the player interactions will be set to build upon. Also the regular version of the game will be mechanically updated with some new features like timers to keep the ball dropping, improved points and combo logs, options to change the UI, updated animations and backgrounds.   
             </Typography>
         </Box>
     )

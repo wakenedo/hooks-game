@@ -6,14 +6,14 @@ import { Typography, Box, Input, Stack, TextField, TextareaAutosize, Button } fr
 
 
 const EmailUs = () => {
-  const [title, setTitle] = useState('')
-  const [matter, setMatter] = useState('')
-  const [body, setBody] = useState('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
 
   function handleSubmit(event) {
-    
-    console.log('Title:', title, 'Matter: ', matter, 'Body:', body);
-    
+
+    console.log('name:', name, 'email: ', email, 'message:', message);
+
     // ..code to submit form to backend here...
 
   }
@@ -49,15 +49,15 @@ const EmailUs = () => {
               color='#FFFF'
 
             >
-              E-mail Title :
+              Name :
             </Typography>
             <Box
               marginLeft='15px'
               marginTop='5px'
             >
               <TextField
-                placeholder='Title...'
-                onInput={e => setTitle(e.target.value)}
+                placeholder='Name'
+                onInput={e => setName(e.target.value)}
                 sx={{
                   width: '700px',
                   backgroundColor: '#FFFF',
@@ -73,15 +73,15 @@ const EmailUs = () => {
               color='#FFFF'
 
             >
-              Matter :
+              Email :
             </Typography>
             <Box
               marginLeft='15px'
               marginTop='5px'
             >
               <TextField
-                placeholder='Matter...'
-                onInput={e => setMatter(e.target.value)}
+                placeholder='Email'
+                onInput={e => setEmail(e.target.value)}
                 sx={{
                   width: '700px',
                   backgroundColor: '#FFFF',
@@ -104,7 +104,7 @@ const EmailUs = () => {
             marginTop='30px'
           >
             <Button
-            onClick={() => handleSubmit()}
+              onClick={() => handleSubmit()}
               variant='contained'
               sx={{
                 backgroundColor: '#5A3392',
@@ -135,13 +135,13 @@ const EmailUs = () => {
           <Typography
             color='#ffff'
           >
-            E-mail Body :
+            Message :
           </Typography>
           <Box
             width='765px'
           >
             <TextareaAutosize
-              onInput={e => setBody(e.target.value)}
+              onInput={e => setMessage(e.target.value)}
               minRows={18.5}
               maxRows={18.5}
               cols={105}

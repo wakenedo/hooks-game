@@ -1,15 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import PatreonImage from '../../../../assets/Patreon.png'
 
 
 const Patreon = () => {
     return (
-        <Link to='/'>
+        <a href='https://www.patreon.com/bePatron?u=77310696'>
             <img 
             width='420px'
             alt='Patreon' src={PatreonImage} />
-        </Link>
+        </a>
     )
 }
 

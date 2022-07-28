@@ -12,7 +12,7 @@ const EmailUs = () => {
 
   function handleSubmit(event) {
     
-    console.log('Title:', title, 'Matter: ', matter, 'body', body);
+    console.log('Title:', title, 'Matter: ', matter, 'Body:', body);
     
     // ..code to submit form to backend here...
 

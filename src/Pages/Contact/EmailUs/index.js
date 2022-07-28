@@ -80,6 +80,7 @@ const EmailUs = () => {
               marginTop='5px'
             >
               <TextField
+                type='email'
                 placeholder='Email'
                 onInput={e => setEmail(e.target.value)}
                 sx={{

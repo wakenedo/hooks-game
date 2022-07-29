@@ -17,6 +17,7 @@ const HooksGame = () => {
     const [points, setPoints] = useState(0)
     const [array, setArray] = useState([])
     const [arrayOfPointsLog, setArrayOfPointsLog] = useState([])
+    const [arrayOfCombosLog, setArrayOfCombosLog] = useState([''])
 
     const blue = '#3388ff'
     const red = '#ff3333'
@@ -80,7 +81,6 @@ const HooksGame = () => {
 
         return backgroundColor
     }
-
     const marginTopLow = () => {
         if (backgroundColor === '#ffeb33') {
             setMarginTop('18px')
@@ -255,7 +255,6 @@ const HooksGame = () => {
 
     }
     weakCombo()
-
     const weirdCombo = () => {
         for (var i = 0; i < weirdCombo1.length; i++) {
 
@@ -592,6 +591,25 @@ const HooksGame = () => {
     }
     pointsLog()
 
+    //How to do it 
+    {/*const combosLog = () => {
+        let arr = arrayOfCombosLog
+        for (let i = 0; i <= combos; i++) {
+            if (i !== combos) {
+                return combos
+            }
+
+            arr.map((point) => {
+                return point
+            })
+            arr.push(combos.toString())
+
+
+            return arr[i]
+        }
+    }
+combosLog()*/}
+
     // Iterating on Whack Points
     useEffect(() => {
         whackPoints()
@@ -644,7 +662,6 @@ const HooksGame = () => {
 
     return (
         <Box
-
             justifyContent='center'
         >
             <NavBar toggle={toggle} />
@@ -663,7 +680,6 @@ const HooksGame = () => {
                     }}
                 >
                     <Title />
-
                     <Button
                         onClick={() => backgroundColorYellow(marginTopLow())}
                         sx={{
@@ -698,7 +714,6 @@ const HooksGame = () => {
                         width="100%"
                         height='100%'
                     >
-
                         <img
                             style={{
                                 marginTop: `${marginTop}`,
@@ -709,7 +724,6 @@ const HooksGame = () => {
                             width={150}
                             alt='ball'
                         />
-
                     </div>
                 </div>
             </Box>
@@ -725,8 +739,12 @@ const HooksGame = () => {
             >
                 Background Color : {backgroundColor}
             </Typography>
-
-            <Box>
+            <Box
+            position="absolute"
+            top='0'
+            marginLeft='150px'
+            marginTop='60px'
+            >
                 <Stack
                     direction='column'
                 >
@@ -735,41 +753,37 @@ const HooksGame = () => {
                             display: 'flex',
                             flexDirection: 'column',
                             width: '200px',
-                            height: '250px',
+                            height: '295px',
                             maxHeight: 'fit-content',
                             backgroundColor: '#414141',
-
                             borderRadius: '5px',
                         }}>
                         <Typography
                             textAlign='center'
                             margin='4px auto'
+                            color='#fff'
                             sx={{
                                 display: 'flex',
                                 flexDirection: 'column',
                             }}
                         >
                             Combo Logs:
-
-                            <Typography>
+                            <Typography
+                            color='#fff'>
                                 {pointsLog()}
                             </Typography>
-
                         </Typography>
-
                     </Box>
                     <Box
+                    marginTop='12px'
                         sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             width: '200px',
-                            height: '250px',
+                            height: '295px',
                             maxHeight: 'fit-content',
                             backgroundColor: '#B2B2B2',
-
                             borderRadius: '5px',
-
-
                         }}>
                         <Typography
                             textAlign='center'
@@ -780,13 +794,10 @@ const HooksGame = () => {
                             }}
                         >
                             Points Log:
-
                             <Typography>
                                 {pointsLog()}
                             </Typography>
-
                         </Typography>
-
                     </Box>
                 </Stack>
             </Box>

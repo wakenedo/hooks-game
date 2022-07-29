@@ -19,7 +19,7 @@ const HooksGame = () => {
     const [arrayOfPointsLog, setArrayOfPointsLog] = useState([])
     //const [arrayOfCombosLog, setArrayOfCombosLog] = useState([''])
 
-    console.log(setArrayOfPointsLog())
+    console.log(setArrayOfPointsLog)
 
     const blue = '#3388ff'
     const red = '#ff3333'
@@ -114,11 +114,11 @@ const HooksGame = () => {
 
 
     const superWhackCombo = () => {
-        for (var p = 0; p < _superWhack1.length; p++) {
+        for (var x = 0; x < _superWhack1.length; x++) {
 
-            // console.log(p, _superWhack1[p])
+            // console.log(x, _superWhack1[x])
         }
-        for (var p1 = 0; p1 < array.length; p1++) {
+        for (var x1 = 0; x1 < array.length; x1++) {
 
             // console.log(i, array[i],)
         }
@@ -151,13 +151,13 @@ const HooksGame = () => {
     }
     superWhackCombo()
     const whackCombo = () => {
-        for (var e = 0; e < whackCombo1.length; e++) {
+        for (var y = 0; y < whackCombo1.length; y++) {
 
-            // console.log(i, whackCombo1[i])
+            // console.log(y, whackCombo1[y])
         }
-        for (var e1 = 0; e1 < array.length; e1++) {
+        for (var y1 = 0; y1 < array.length; y1++) {
 
-            // console.log(i, array[i],)
+            // console.log(y1, array[y1],)
         }
 
 
@@ -187,13 +187,13 @@ const HooksGame = () => {
     }
     whackCombo()
     const weakestCombo = () => {
-        for (var d = 0; d < weakestCombo1.length; d++) {
+        for (var z = 0; z < weakestCombo1.length; z++) {
 
-            // console.log(d, weakestCombo1[d])
+            // console.log(z, weakestCombo1[z])
         }
-        for (var d1 = 0; d1 < array.length; d1++) {
+        for (var z1 = 0; z1 < array.length; z1++) {
 
-            // console.log(d1, array[d1],)
+            // console.log(z1, array[z1],)
         }
 
 
@@ -223,13 +223,13 @@ const HooksGame = () => {
     }
     weakestCombo()
     const weakCombo = () => {
-        for (var a = 0; a < weakCombo1.length; a++) {
+        for (var w = 0; w < weakCombo1.length; w++) {
 
-            // console.log(i, weakCombo1[i])
+            // console.log(w, weakCombo1[w])
         }
-        for (var a1 = 0; a1 < array.length; a1++) {
+        for (var w1 = 0; w1 < array.length; w1++) {
 
-            // console.log(i, array[i],)
+            // console.log(w1, array[w1],)
         }
 
 
@@ -258,15 +258,14 @@ const HooksGame = () => {
 
     }
     weakCombo()
-
     const weirdCombo = () => {
-        for (var y = 0; y < weirdCombo1.length; y++) {
+        for (var u = 0; u < weirdCombo1.length; u++) {
 
             // console.log(i, weirdCombo1[i])
         }
-        for (var y1 = 0; y1 < array.length; y1++) {
+        for (var u1 = 0; u1 < array.length; u1++) {
 
-            // console.log(i, array[i],)
+            // console.log(u1, array[u1],)
         }
 
         if (array[0] === weirdCombo1[0]) {
@@ -297,13 +296,13 @@ const HooksGame = () => {
     }
     weirdCombo()
     const regularCombo = () => {
-        for (var g = 0; g < regularCombo1.length; g++) {
+        for (var p = 0; p < regularCombo1.length; p++) {
 
-            // console.log(i, regularCombo1[i])
+            // console.log(p, regularCombo1[p])
         }
-        for (var g1 = 0; g1 < array.length; g1++) {
+        for (var p1 = 0; p1 < array.length; p1++) {
 
-            // console.log(i, array[i],)
+            // console.log(p1, array[p1],)
         }
 
         if (array[0] === regularCombo1[0]) {
@@ -334,13 +333,13 @@ const HooksGame = () => {
     }
     regularCombo()
     const superCombo = () => {
-        for (var u = 0; u < _superCombo1.length; u++) {
+        for (var f = 0; f < _superCombo1.length; f++) {
 
-            // console.log(i, _superCombo[i])
+            // console.log(f, _superCombo[f])
         }
-        for (var u1 = 0; u1 < array.length; u1++) {
+        for (var f1 = 0; f1 < array.length; f1++) {
 
-            // console.log(i, array[i],)
+            // console.log(f1, array[f1],)
         }
 
 
@@ -579,8 +578,8 @@ const HooksGame = () => {
 
     const pointsLog = () => {
         let arr = arrayOfPointsLog
-        for (let x = 0; x <= points; x++) {
-            if (x !== points) {
+        for (let i = 0; i <= points; i++) {
+            if (i !== points) {
                 return points
             }
 
@@ -590,10 +589,29 @@ const HooksGame = () => {
             arr.push(points.toString())
 
 
-            return arr
+            return arr[i]
         }
     }
-    //pointsLog()
+    pointsLog()
+
+    //How to do it 
+    {/*const combosLog = () => {
+        let arr = arrayOfCombosLog
+        for (let i = 0; i <= combos; i++) {
+            if (i !== combos) {
+                return combos
+            }
+
+            arr.map((point) => {
+                return point
+            })
+            arr.push(combos.toString())
+
+
+            return arr[i]
+        }
+    }
+combosLog()*/}
 
     // Iterating on Whack Points
     useEffect(() => {
@@ -630,7 +648,7 @@ const HooksGame = () => {
         array.push(backgroundColor)
         setArray(array)
 
-    }, [backgroundColor, array])
+    }, [backgroundColor])
 
     console.log('Points log:', points)
     console.log('Array log:', array.length, array)
@@ -647,7 +665,6 @@ const HooksGame = () => {
 
     return (
         <Box
-
             justifyContent='center'
         >
             <NavBar toggle={toggle} />
@@ -666,7 +683,6 @@ const HooksGame = () => {
                     }}
                 >
                     <Title />
-
                     <Button
                         onClick={() => backgroundColorYellow(marginTopLow())}
                         sx={{
@@ -701,7 +717,6 @@ const HooksGame = () => {
                         width="100%"
                         height='100%'
                     >
-
                         <img
                             style={{
                                 marginTop: `${marginTop}`,
@@ -712,7 +727,6 @@ const HooksGame = () => {
                             width={150}
                             alt='ball'
                         />
-
                     </div>
                 </div>
             </Box>
@@ -728,8 +742,12 @@ const HooksGame = () => {
             >
                 Background Color : {backgroundColor}
             </Typography>
-
-            <Box>
+            <Box
+            position="absolute"
+            top='0'
+            marginLeft='150px'
+            marginTop='60px'
+            >
                 <Stack
                     direction='column'
                 >
@@ -738,41 +756,37 @@ const HooksGame = () => {
                             display: 'flex',
                             flexDirection: 'column',
                             width: '200px',
-                            height: '250px',
+                            height: '295px',
                             maxHeight: 'fit-content',
                             backgroundColor: '#414141',
-
                             borderRadius: '5px',
                         }}>
                         <Typography
                             textAlign='center'
                             margin='4px auto'
+                            color='#fff'
                             sx={{
                                 display: 'flex',
                                 flexDirection: 'column',
                             }}
                         >
                             Combo Logs:
-
-                            <Typography>
+                            <Typography
+                            color='#fff'>
                                 {pointsLog()}
                             </Typography>
-
                         </Typography>
-
                     </Box>
                     <Box
+                    marginTop='12px'
                         sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             width: '200px',
-                            height: '250px',
+                            height: '295px',
                             maxHeight: 'fit-content',
                             backgroundColor: '#B2B2B2',
-
                             borderRadius: '5px',
-
-
                         }}>
                         <Typography
                             textAlign='center'
@@ -783,13 +797,10 @@ const HooksGame = () => {
                             }}
                         >
                             Points Log:
-
                             <Typography>
                                 {pointsLog()}
                             </Typography>
-
                         </Typography>
-
                     </Box>
                 </Stack>
             </Box>

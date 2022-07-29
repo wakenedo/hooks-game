@@ -663,7 +663,7 @@ const HooksGame = () => {
                     }}
                 >
                     <Title />
-                    
+
                     <Button
                         onClick={() => backgroundColorYellow(marginTopLow())}
                         sx={{
@@ -727,69 +727,69 @@ const HooksGame = () => {
             </Typography>
 
             <Box>
-                        <Stack
-                            direction='column'
+                <Stack
+                    direction='column'
+                >
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            width: '200px',
+                            height: '250px',
+                            maxHeight: 'fit-content',
+                            backgroundColor: '#414141',
+
+                            borderRadius: '5px',
+                        }}>
+                        <Typography
+                            textAlign='center'
+                            margin='4px auto'
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                            }}
                         >
-                            <Box
-                                sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    width: '200px',
-                                    height: '250px',
-                                    maxHeight: 'fit-content',
-                                    backgroundColor: '#414141',
+                            Combo Logs:
 
-                                    borderRadius: '5px',
-                                }}>
-                                <Typography
-                                    textAlign='center'
-                                    margin='4px auto'
-                                    sx={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                    }}
-                                >
-                                    Combo Logs:
+                            <Typography>
+                                {pointsLog()}
+                            </Typography>
 
-                                    <Typography>
-                                        {pointsLog()}
-                                    </Typography>
+                        </Typography>
 
-                                </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            width: '200px',
+                            height: '250px',
+                            maxHeight: 'fit-content',
+                            backgroundColor: '#B2B2B2',
 
-                            </Box>
-                            <Box
-                                sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    width: '200px',
-                                    height: '250px',
-                                    maxHeight: 'fit-content',
-                                    backgroundColor: '#B2B2B2',
-
-                                    borderRadius: '5px',
+                            borderRadius: '5px',
 
 
-                                }}>
-                                <Typography
-                                    textAlign='center'
-                                    margin='4px auto'
-                                    sx={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                    }}
-                                >
-                                    Points Log:
+                        }}>
+                        <Typography
+                            textAlign='center'
+                            margin='4px auto'
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                            }}
+                        >
+                            Points Log:
 
-                                    <Typography>
-                                        {pointsLog()}
-                                    </Typography>
+                            <Typography>
+                                {pointsLog()}
+                            </Typography>
 
-                                </Typography>
+                        </Typography>
 
-                            </Box>
-                        </Stack>
-                    </Box>                            
+                    </Box>
+                </Stack>
+            </Box>
 
         </Box>
     )

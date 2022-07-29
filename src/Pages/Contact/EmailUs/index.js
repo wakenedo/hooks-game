@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { Typography, Box, Input, Stack, TextField, TextareaAutosize, Button } from '@mui/material'
+import { Typography, Box, Stack, TextField, TextareaAutosize, Button } from '@mui/material'
+import emailjs from 'emailjs-com'
+import { init } from 'emailjs-com';
+init('user_id');
 
 
 
@@ -9,14 +12,38 @@ const EmailUs = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [emailSent, setEmailSent] = useState(false);
 
-  function handleSubmit(event) {
+  const submit = () => {
 
-    console.log('name:', name, 'email: ', email, 'message:', message);
 
-    // ..code to submit form to backend here...
+    if (name && email && message) {
 
-  }
+      const serviceId = 'gamehookcontact_lusp1eq';
+      const templateId = 'template_85op4zo';
+      const publicKey = 'rD66fiCRkpFBJkXxt';
+      const templateParams = {
+        name,
+        email,
+        message
+      };
+
+      emailjs.send(serviceId, templateId, templateParams, publicKey)
+        .then(response => console.log(response))
+        .then(error => console.log(error));
+
+      setName('');
+      setEmail('');
+      setMessage('');
+      setEmailSent(true);
+      alert('💌 E-mail Sent Successfully')
+    } else {
+      alert('Please fill in all fields.');
+    }
+
+  };
+
+
 
   return (
     <>
@@ -57,7 +84,8 @@ const EmailUs = () => {
             >
               <TextField
                 placeholder='Name'
-                onInput={e => setName(e.target.value)}
+                value={name}
+                onChange={e => setName(e.target.value)}
                 sx={{
                   width: '700px',
                   backgroundColor: '#FFFF',
@@ -81,8 +109,9 @@ const EmailUs = () => {
             >
               <TextField
                 type='email'
-                placeholder='Email'
-                onInput={e => setEmail(e.target.value)}
+                value={email}
+                placeholder='Your email address'
+                onChange={e => setEmail(e.target.value)}
                 sx={{
                   width: '700px',
                   backgroundColor: '#FFFF',
@@ -105,7 +134,7 @@ const EmailUs = () => {
             marginTop='30px'
           >
             <Button
-              onClick={() => handleSubmit()}
+              onClick={submit}
               variant='contained'
               sx={{
                 backgroundColor: '#5A3392',
@@ -142,7 +171,8 @@ const EmailUs = () => {
             width='765px'
           >
             <TextareaAutosize
-              onInput={e => setMessage(e.target.value)}
+              value={message}
+              onChange={e => setMessage(e.target.value)}
               minRows={18.5}
               maxRows={18.5}
               cols={105}

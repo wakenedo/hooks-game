@@ -87,7 +87,10 @@ const SideBar = ({isOpen, toggle}) => {
                     <img
                         alt='ball-icon'
                         width={25}
-                        src={BallIcon} />
+                        src={BallIcon}
+                        
+                        
+                        />
                     <Link
                         to='/Road_Map'
                         style={{

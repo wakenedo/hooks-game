@@ -35,7 +35,7 @@ const AboutTheProject = () => {
             height='1470px'
         >
             <NavBar toggle={toggle} />
-            <SideBar isOpen={isOpen} toggle={toggle} />
+            <SideBar isOpen={!isOpen} toggle={toggle} />
             <DropTheBallLogo />
             <Typography
                 marginTop='15px'

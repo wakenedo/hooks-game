@@ -17,7 +17,9 @@ const HooksGame = () => {
     const [points, setPoints] = useState(0)
     const [array, setArray] = useState([])
     const [arrayOfPointsLog, setArrayOfPointsLog] = useState([])
-    const [arrayOfCombosLog, setArrayOfCombosLog] = useState([''])
+    //const [arrayOfCombosLog, setArrayOfCombosLog] = useState([''])
+
+    console.log(setArrayOfPointsLog())
 
     const blue = '#3388ff'
     const red = '#ff3333'
@@ -111,11 +113,11 @@ const HooksGame = () => {
 
 
     const superWhackCombo = () => {
-        for (var i = 0; i < _superWhack1.length; i++) {
+        for (var p = 0; p < _superWhack1.length; p++) {
 
-            // console.log(i, _superWhack1[i])
+            // console.log(p, _superWhack1[p])
         }
-        for (var i = 0; i < array.length; i++) {
+        for (var p1 = 0; p1 < array.length; p1++) {
 
             // console.log(i, array[i],)
         }
@@ -148,11 +150,11 @@ const HooksGame = () => {
     }
     superWhackCombo()
     const whackCombo = () => {
-        for (var i = 0; i < whackCombo1.length; i++) {
+        for (var e = 0; e < whackCombo1.length; e++) {
 
             // console.log(i, whackCombo1[i])
         }
-        for (var i = 0; i < array.length; i++) {
+        for (var e1 = 0; e1 < array.length; e1++) {
 
             // console.log(i, array[i],)
         }
@@ -184,13 +186,13 @@ const HooksGame = () => {
     }
     whackCombo()
     const weakestCombo = () => {
-        for (var i = 0; i < weakestCombo1.length; i++) {
+        for (var d = 0; d < weakestCombo1.length; d++) {
 
-            // console.log(i, weakestCombo1[i])
+            // console.log(d, weakestCombo1[d])
         }
-        for (var i = 0; i < array.length; i++) {
+        for (var d1 = 0; d1 < array.length; d1++) {
 
-            // console.log(i, array[i],)
+            // console.log(d1, array[d1],)
         }
 
 
@@ -220,11 +222,11 @@ const HooksGame = () => {
     }
     weakestCombo()
     const weakCombo = () => {
-        for (var i = 0; i < weakCombo1.length; i++) {
+        for (var a = 0; a < weakCombo1.length; a++) {
 
             // console.log(i, weakCombo1[i])
         }
-        for (var i = 0; i < array.length; i++) {
+        for (var a1 = 0; a1 < array.length; a1++) {
 
             // console.log(i, array[i],)
         }
@@ -256,11 +258,11 @@ const HooksGame = () => {
     }
     weakCombo()
     const weirdCombo = () => {
-        for (var i = 0; i < weirdCombo1.length; i++) {
+        for (var y = 0; y < weirdCombo1.length; y++) {
 
             // console.log(i, weirdCombo1[i])
         }
-        for (var i = 0; i < array.length; i++) {
+        for (var y1 = 0; y1 < array.length; y1++) {
 
             // console.log(i, array[i],)
         }
@@ -293,11 +295,11 @@ const HooksGame = () => {
     }
     weirdCombo()
     const regularCombo = () => {
-        for (var i = 0; i < regularCombo1.length; i++) {
+        for (var g = 0; g < regularCombo1.length; g++) {
 
             // console.log(i, regularCombo1[i])
         }
-        for (var i = 0; i < array.length; i++) {
+        for (var g1 = 0; g1 < array.length; g1++) {
 
             // console.log(i, array[i],)
         }
@@ -330,11 +332,11 @@ const HooksGame = () => {
     }
     regularCombo()
     const superCombo = () => {
-        for (var i = 0; i < _superCombo1.length; i++) {
+        for (var u = 0; u < _superCombo1.length; u++) {
 
             // console.log(i, _superCombo[i])
         }
-        for (var i = 0; i < array.length; i++) {
+        for (var u1 = 0; u1 < array.length; u1++) {
 
             // console.log(i, array[i],)
         }
@@ -575,8 +577,8 @@ const HooksGame = () => {
 
     const pointsLog = () => {
         let arr = arrayOfPointsLog
-        for (let i = 0; i <= points; i++) {
-            if (i !== points) {
+        for (let x = 0; x <= points; x++) {
+            if (x !== points) {
                 return points
             }
 
@@ -586,10 +588,10 @@ const HooksGame = () => {
             arr.push(points.toString())
 
 
-            return arr[i]
+            return arr
         }
     }
-    pointsLog()
+    //pointsLog()
 
     //How to do it 
     {/*const combosLog = () => {
@@ -645,7 +647,7 @@ combosLog()*/}
         array.push(backgroundColor)
         setArray(array)
 
-    }, [backgroundColor])
+    }, [backgroundColor, array])
 
     console.log('Points log:', points)
     console.log('Array log:', array.length, array)

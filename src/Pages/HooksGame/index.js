@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { Box, Button, Typography, Stack } from '@mui/material'
 
 //Assets
@@ -10,6 +10,10 @@ import SideBar from '../../components/SideBar'
 
 //InnerComponents
 import Title from './Title'
+import PointsLog from './PointsLog'
+import ComboLog from './ComboLog'
+import Score from './Score'
+import Game from './Game'
 
 const HooksGame = () => {
     const [backgroundColor, setBackgroundColor] = useState('#ffeb33')
@@ -19,24 +23,24 @@ const HooksGame = () => {
     const [arrayOfPointsLog, setArrayOfPointsLog] = useState([])
     //const [arrayOfCombosLog, setArrayOfCombosLog] = useState([''])
 
-    console.log(setArrayOfPointsLog)
+
 
     const blue = '#3388ff'
     const red = '#ff3333'
     const yellow = '#ffeb33'
 
-    const regularCombo1 = [yellow, blue, red]
-    const regularCombo2 = [red, blue, yellow]
-    const weirdCombo1 = [blue, yellow, red]
-    const weirdCombo2 = [blue, red, yellow]
-    const weakCombo1 = [red, yellow, blue]
-    const weakCombo2 = [yellow, red, blue]
-    const weakestCombo1 = [blue, red, blue]
-    const weakestCombo2 = [yellow, blue, yellow]
-    const whackCombo1 = [red, blue, red]
-    const whackCombo2 = [red, yellow, red]
-    const _superCombo1 = [blue, yellow, blue, red]
-    const _superWhack1 = [blue, yellow, blue, yellow]
+    const regularCombo1 = useMemo(() => [yellow, blue, red], [])
+    const regularCombo2 = useMemo(() => [red, blue, yellow], [])
+    const weirdCombo1 = useMemo(() => [blue, yellow, red], [])
+    const weirdCombo2 = useMemo(() => [blue, red, yellow], [])
+    const weakCombo1 = useMemo(() => [red, yellow, blue], [])
+    const weakCombo2 = useMemo(() => [yellow, red, blue], [])
+    const weakestCombo1 = useMemo(() => [blue, red, blue], [])
+    const weakestCombo2 = useMemo(() => [yellow, blue, yellow], [])
+    const whackCombo1 = useMemo(() => [red, blue, red], [])
+    const whackCombo2 = useMemo(() => [red, yellow, red], [])
+    const _superCombo1 = useMemo(() => [blue, yellow, blue, red], [])
+    const _superWhack1 = useMemo(() => [blue, yellow, blue, yellow], [])
 
 
     console.log('Background log:', backgroundColor)
@@ -113,7 +117,7 @@ const HooksGame = () => {
     }
 
 
-    const superWhackCombo = () => {
+    const superWhackCombo = useCallback(() => {
         for (var x = 0; x < _superWhack1.length; x++) {
 
             // console.log(x, _superWhack1[x])
@@ -122,7 +126,6 @@ const HooksGame = () => {
 
             // console.log(i, array[i],)
         }
-
 
         if (array[0] === _superWhack1[0]) {
             if (array[1] === _superWhack1[1]) {
@@ -148,9 +151,11 @@ const HooksGame = () => {
         console.log('super whack test', array, _superWhack1)
         return false
 
-    }
+
+    }, [_superWhack1, array, points])
     superWhackCombo()
-    const whackCombo = () => {
+
+    const whackCombo = useCallback(() => {
         for (var y = 0; y < whackCombo1.length; y++) {
 
             // console.log(y, whackCombo1[y])
@@ -184,9 +189,11 @@ const HooksGame = () => {
         console.log('whack test', array, whackCombo1)
         return false
 
-    }
+
+    }, [whackCombo1, whackCombo2, array])
     whackCombo()
-    const weakestCombo = () => {
+
+    const weakestCombo = useCallback(() => {
         for (var z = 0; z < weakestCombo1.length; z++) {
 
             // console.log(z, weakestCombo1[z])
@@ -220,9 +227,11 @@ const HooksGame = () => {
         console.log('weak test', array, weakestCombo1)
         return false
 
-    }
+
+    }, [weakestCombo1, weakestCombo2, array])
     weakestCombo()
-    const weakCombo = () => {
+
+    const weakCombo = useCallback(() => {
         for (var w = 0; w < weakCombo1.length; w++) {
 
             // console.log(w, weakCombo1[w])
@@ -256,9 +265,10 @@ const HooksGame = () => {
         console.log('weak test', array, weakCombo1)
         return false
 
-    }
+    }, [weakCombo1, weakCombo2, array])
     weakCombo()
-    const weirdCombo = () => {
+
+    const weirdCombo = useCallback(() => {
         for (var u = 0; u < weirdCombo1.length; u++) {
 
             // console.log(i, weirdCombo1[i])
@@ -293,9 +303,10 @@ const HooksGame = () => {
         console.log('regular test', array, weirdCombo1)
         return false
 
-    }
+    }, [weirdCombo1, weirdCombo2, array])
     weirdCombo()
-    const regularCombo = () => {
+
+    const regularCombo = useCallback(() => {
         for (var p = 0; p < regularCombo1.length; p++) {
 
             // console.log(p, regularCombo1[p])
@@ -330,9 +341,10 @@ const HooksGame = () => {
         console.log('regular test', array, regularCombo1)
         return false
 
-    }
+    }, [regularCombo1, regularCombo2, array])
     regularCombo()
-    const superCombo = () => {
+
+    const superCombo = useCallback(() => {
         for (var f = 0; f < _superCombo1.length; f++) {
 
             // console.log(f, _superCombo[f])
@@ -359,11 +371,10 @@ const HooksGame = () => {
         console.log(' super combo test', array, _superCombo1)
         return false
 
-    }
+    }, [_superCombo1, array])
     superCombo()
 
-    const superWhackPoints = () => {
-
+    const superWhackPoints = useCallback(() => {
         if (superWhackCombo(true)) {
             var addPoints = points - 4
             var pointsAdded = addPoints
@@ -394,9 +405,9 @@ const HooksGame = () => {
             }
             return points
         }
-    }
-    const whackPoints = () => {
+    }, [points, superWhackCombo])
 
+    const whackPoints = useCallback(() => {
         if (whackCombo(true)) {
             var addPoints = points + 0
             var pointsAdded = addPoints
@@ -424,9 +435,9 @@ const HooksGame = () => {
             }
             return points
         }
-    }
-    const weakestPoints = () => {
+    }, [points, whackCombo])
 
+    const weakestPoints = useCallback(() => {
         if (weakestCombo(true)) {
             var addPoints = points + 1
             var pointsAdded = addPoints
@@ -454,9 +465,9 @@ const HooksGame = () => {
             }
             return points
         }
-    }
-    const weakPoints = () => {
+    }, [points, weakestCombo])
 
+    const weakPoints = useCallback(() => {
         if (weakCombo(true)) {
             var addPoints = points + 2
             var pointsAdded = addPoints
@@ -484,9 +495,9 @@ const HooksGame = () => {
             }
             return points
         }
-    }
-    const weirdPoints = () => {
+    }, [points, weakCombo])
 
+    const weirdPoints = useCallback(() => {
         if (weirdCombo(true)) {
             var addPoints = points + 2
             var pointsAdded = addPoints
@@ -514,9 +525,9 @@ const HooksGame = () => {
             }
             return points
         }
-    }
-    const regularPoints = () => {
+    }, [points, weirdCombo])
 
+    const regularPoints = useCallback(() => {
         if (regularCombo(true)) {
             var addPoints = points + 3
             var pointsAdded = addPoints
@@ -544,9 +555,9 @@ const HooksGame = () => {
             }
             return points
         }
-    }
-    const superPoints = () => {
+    }, [points, regularCombo])
 
+    const superPoints = useCallback(() => {
         if (superCombo(true)) {
             var addPoints = points + 6
             var pointsAdded = addPoints
@@ -574,7 +585,10 @@ const HooksGame = () => {
             }
             return points
         }
-    }
+    }, [points, superCombo])
+
+
+
 
     const pointsLog = () => {
         let arr = arrayOfPointsLog
@@ -595,58 +609,47 @@ const HooksGame = () => {
     pointsLog()
 
     //How to do it 
-    {/*const combosLog = () => {
-        let arr = arrayOfCombosLog
-        for (let i = 0; i <= combos; i++) {
-            if (i !== combos) {
-                return combos
-            }
-
-            arr.map((point) => {
-                return point
-            })
-            arr.push(combos.toString())
+    const combosLog = () => {
 
 
-            return arr[i]
-        }
     }
-combosLog()*/}
+    combosLog()
 
     // Iterating on Whack Points
     useEffect(() => {
         whackPoints()
-    }, [backgroundColor])
+    }, [backgroundColor, whackPoints])
     // Iterating on Weak Points
     useEffect(() => {
         weakPoints()
-    }, [backgroundColor])
+    }, [backgroundColor, weakPoints])
     // Iterating on Weakest Points
     useEffect(() => {
         weakestPoints()
-    }, [backgroundColor])
+    }, [backgroundColor, weakestPoints])
     // Iterating on Weird Points
     useEffect(() => {
         weirdPoints()
-    }, [backgroundColor])
+    }, [backgroundColor, weirdPoints])
     // Iterating on Regular Points
     useEffect(() => {
         regularPoints()
-    }, [backgroundColor])
+    }, [backgroundColor, regularPoints])
     // Iterating on Super Points
     useEffect(() => {
         superPoints()
-    }, [backgroundColor])
+    }, [backgroundColor, superPoints])
     // Iterating on superWhack Points
     useEffect(() => {
         superWhackPoints()
-    }, [backgroundColor])
+    }, [backgroundColor, superWhackPoints])
 
 
     //setting Array state for combo matching
     useEffect(() => {
         array.push(backgroundColor)
         setArray(array)
+        //setArray( arr => [...arr, `${backgroundColor}`]);
 
     }, [backgroundColor])
 
@@ -669,73 +672,17 @@ combosLog()*/}
         >
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />
-            <Box>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        width: '1200px',
-                        height: '600px',
-                        maxHeight: 'fit-content',
-                        backgroundColor: `${backgroundColor}`,
-                        margin: '20px auto'
-
-                    }}
-                >
-                    <Title />
-                    <Button
-                        onClick={() => backgroundColorYellow(marginTopLow())}
-                        sx={{
-                            color: '#000000',
-                            height: '20px',
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        Yellow !
-                    </Button>
-                    <Button
-                        onClick={() => backgroundColorBlue(marginTopMid())}
-                        sx={{
-                            color: '#000000',
-                            height: '20px',
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        Blue !
-                    </Button>
-                    <Button
-                        onClick={() => backgroundColorRed(marginTopHigh())}
-                        sx={{
-                            color: '#000000',
-                            height: '20px',
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        Red !
-                    </Button>
-                    <div
-                        width="100%"
-                        height='100%'
-                    >
-                        <img
-                            style={{
-                                marginTop: `${marginTop}`,
-                                transition: '0.2 ease-in-out',
-                                marginLeft: '520px'
-                            }}
-                            src={Ball}
-                            width={150}
-                            alt='ball'
-                        />
-                    </div>
-                </div>
-            </Box>
-            <Typography
-                variant='h5'
-                textAlign="center"
-            >
-                Points : {points}
-            </Typography>
+            <Game 
+            backgroundColor={backgroundColor} 
+            marginTop={marginTop} 
+            backgroundColorYellow={backgroundColorYellow}
+            backgroundColorBlue={backgroundColorBlue}
+            backgroundColorRed={backgroundColorRed}
+            marginTopHigh={marginTopHigh}
+            marginTopMid={marginTopMid}
+            marginTopLow={marginTopLow}      
+            />
+            <Score  points={points}/>
             <Typography
                 variant='h6'
                 textAlign="center"
@@ -743,65 +690,16 @@ combosLog()*/}
                 Background Color : {backgroundColor}
             </Typography>
             <Box
-            position="absolute"
-            top='0'
-            marginLeft='150px'
-            marginTop='60px'
+                position="absolute"
+                top='0'
+                marginLeft='150px'
+                marginTop='60px'
             >
                 <Stack
                     direction='column'
                 >
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            width: '200px',
-                            height: '295px',
-                            maxHeight: 'fit-content',
-                            backgroundColor: '#414141',
-                            borderRadius: '5px',
-                        }}>
-                        <Typography
-                            textAlign='center'
-                            margin='4px auto'
-                            color='#fff'
-                            sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                            }}
-                        >
-                            Combo Logs:
-                            <Typography
-                            color='#fff'>
-                                {pointsLog()}
-                            </Typography>
-                        </Typography>
-                    </Box>
-                    <Box
-                    marginTop='12px'
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            width: '200px',
-                            height: '295px',
-                            maxHeight: 'fit-content',
-                            backgroundColor: '#B2B2B2',
-                            borderRadius: '5px',
-                        }}>
-                        <Typography
-                            textAlign='center'
-                            margin='4px auto'
-                            sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                            }}
-                        >
-                            Points Log:
-                            <Typography>
-                                {pointsLog()}
-                            </Typography>
-                        </Typography>
-                    </Box>
+                    <ComboLog />          
+                    <PointsLog pointsLog={pointsLog}/>
                 </Stack>
             </Box>
 

@@ -27,7 +27,7 @@ const Donate = () => {
             height='710px'
         >
             <NavBar toggle={toggle} />
-            <SideBar isOpen={isOpen} toggle={toggle} />
+            <SideBar isOpen={!isOpen} toggle={toggle} />
             <DropTheBallLogo />
             <Typography
                 marginTop='15px'

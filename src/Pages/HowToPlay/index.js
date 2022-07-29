@@ -31,7 +31,7 @@ const HowToPlay = () => {
             height='1500px'
         >
             <NavBar toggle={toggle} />
-            <SideBar isOpen={isOpen} toggle={toggle} />
+            <SideBar isOpen={!isOpen} toggle={toggle} />
             <Box>
                 <DropTheBallLogo />
                 <Box>

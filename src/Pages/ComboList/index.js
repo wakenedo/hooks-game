@@ -25,7 +25,7 @@ const ComboList = () => {
             height='475px'
         >
             <NavBar toggle={toggle} />
-            <SideBar isOpen={isOpen} toggle={toggle} />
+            <SideBar isOpen={!isOpen} toggle={toggle} />
             <DropTheBallLogo />
             <Typography
                 marginTop='15px'

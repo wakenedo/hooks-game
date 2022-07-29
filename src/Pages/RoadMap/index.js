@@ -30,7 +30,7 @@ const RoadMap = () => {
             height='2785px'
         >
             <NavBar toggle={toggle} />
-            <SideBar isOpen={isOpen} toggle={toggle} />
+            <SideBar isOpen={!isOpen} toggle={toggle} />
             <DropTheBallLogo />
             <Typography
                 marginTop='15px'

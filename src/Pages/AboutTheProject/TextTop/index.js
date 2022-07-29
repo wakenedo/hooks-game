@@ -5,18 +5,19 @@ const TextTop = () => {
     return (
         <>
             <Typography
-                marginLeft='45px'
+                marginLeft='95px'
                 fontSize='33px'
-                color='#FFFF'
+                color='#282C34'
+                fontWeight='bold'
                 letterSpacing={5}
             >
                 Why we do the things we do ?
             </Typography>
             <Typography
                 marginTop='15px'
-                marginLeft='45px'
+                marginLeft='95px'
                 fontSize='14.5px'
-                color='#FFFF'
+                color='#ffff'
                 letterSpacing={5}
                 maxWidth='785px'
                 textAlign='justify'

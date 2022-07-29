@@ -5,7 +5,8 @@ import { Box, Typography, Stack } from '@mui/material'
 //Assets
 import LightBulb from '../../assets/svg/lightbulb-svgrepo-com.svg'
 import Ok from '../../assets/gif/okgif.gif'
-import Image1 from '../../assets/image1.jpg'
+import BBall from '../../assets/svg/basketball-svgrepo-com.svg'
+
 
 
 //Components
@@ -31,7 +32,7 @@ const AboutTheProject = () => {
     return (
         <Box
             backgroundColor='#FF3333'
-            height='1305px'
+            height='1470px'
         >
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />
@@ -41,7 +42,7 @@ const AboutTheProject = () => {
                 marginLeft='20px'
                 fontSize='44px'
                 fontWeight='bold'
-                color='#FFFF'
+                color='#5A3392'
                 letterSpacing={5}
             >
                 About The Project
@@ -68,9 +69,9 @@ const AboutTheProject = () => {
                     >
 
                         <img
-                            width='685px'
+                            width='625px'
                             alt='animated'
-                            src={Image1} />
+                            src={BBall} />
                     </Box>
                     <Box>
                         <TextTop />

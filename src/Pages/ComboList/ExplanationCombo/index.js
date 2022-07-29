@@ -8,7 +8,8 @@ const ExplanationCombo = () => {
                 marginTop='45px'
                 marginLeft='20px'
                 fontSize='33px'
-                color='#FFFF'
+                fontWeight='bold'
+                color='#282C34'
                 letterSpacing={5}
             >
                 How Combo Works

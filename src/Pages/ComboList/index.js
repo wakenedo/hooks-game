@@ -32,7 +32,7 @@ const ComboList = () => {
                 marginLeft='20px'
                 fontSize='44px'
                 fontWeight='bold'
-                color='#FFFF'
+                color='#5A3392'
                 letterSpacing={5}
             >
                 Combo List

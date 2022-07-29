@@ -12,7 +12,7 @@ const DonateFooter = () => {
         <>
             <Typography
                 paddingTop='45px'
-
+                fontWeight='bold'
                 fontSize='33px'
                 color='#282C34'
                 letterSpacing={5}

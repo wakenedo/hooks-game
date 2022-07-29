@@ -1,5 +1,5 @@
 import React from 'react'
-import PatreonImage from '../../../../assets/Patreon.png'
+import PatreonImage from '../../../../assets/Donate/Patreon.png'
 
 
 const Patreon = () => {

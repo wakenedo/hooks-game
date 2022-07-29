@@ -8,7 +8,8 @@ const ContactCreator = () => {
                 marginTop='45px'
                 marginLeft='20px'
                 fontSize='33px'
-                color='#FFFF'
+                color='#282C34'
+                fontWeight='bold'
                 letterSpacing={5}
             >
                 Contact the creator

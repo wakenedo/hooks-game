@@ -2,8 +2,8 @@ import React from 'react'
 
 import { Typography, Box } from '@mui/material'
 
-import ComboRight from '../../../assets/ComboRight.png'
-import ComboLeft from '../../../assets/ComboLeft.png'
+import ComboRight from '../../../assets/ComboList/ComboRight.png'
+import ComboLeft from '../../../assets/ComboList/ComboLeft.png'
 
 
 

@@ -38,7 +38,7 @@ const EmailUs = () => {
       setEmailSent(true);
       alert('💌 E-mail Sent Successfully')
     } else {
-      alert('Please fill in all fields.');
+      alert('🏀 Please fill in all fields. 🏀');
     }
 
   };
@@ -51,7 +51,8 @@ const EmailUs = () => {
         marginTop='20px'
         marginLeft='20px'
         fontSize='33px'
-        color='#FFFF'
+        color='#282C34'
+        fontWeight='bold'
         letterSpacing={5}
       >
         E-mail the project

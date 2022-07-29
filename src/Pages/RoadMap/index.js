@@ -37,7 +37,7 @@ const RoadMap = () => {
                 marginLeft='20px'
                 fontSize='44px'
                 fontWeight='bold'
-                color='#FFFF'
+                color='#282C34'
                 letterSpacing={5}
             >
                 Road Map

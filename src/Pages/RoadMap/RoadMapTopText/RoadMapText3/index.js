@@ -8,15 +8,16 @@ const RoadMapText3 = () => {
         >
             <Typography              
                 fontSize='33px'
-                color='#FFFF'
+                color='#282C34'
                 letterSpacing={5}
+                fontWeight='bold'
             >
                 Phase 3
             </Typography>
             <Typography
                 marginTop='15px'
                 fontSize='14.5px'
-                color='#FFFF'
+                color='#ffff'
                 letterSpacing={5}
                 maxWidth='585px'
                 textAlign='justify'

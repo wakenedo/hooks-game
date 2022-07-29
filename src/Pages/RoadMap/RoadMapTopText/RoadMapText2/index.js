@@ -12,7 +12,8 @@ const TextBottom = () => {
                 
                 marginLeft='20px'
                 fontSize='33px'
-                color='#ffff'
+                color='#282C34'
+                fontWeight='bold'
                 letterSpacing={5}
             >
                 Phase 2

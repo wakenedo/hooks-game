@@ -12,6 +12,7 @@ const TextBottom = () => {
                 fontSize='33px'
                 color='#282C34'
                 letterSpacing={5}
+                fontWeight='bold'
             >
                 That's it !
             </Typography>

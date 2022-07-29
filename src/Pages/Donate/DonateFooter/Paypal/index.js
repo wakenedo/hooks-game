@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import PaypalImage from '../../../../assets/Paypal.png'
+import PaypalImage from '../../../../assets/Donate/Paypal.png'
 
 
 const Paypal = () => {

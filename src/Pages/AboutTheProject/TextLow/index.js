@@ -11,6 +11,7 @@ const TextLow = () => {
                 fontSize='33px'
                 color='#282C34'
                 letterSpacing={5}
+                fontWeight='bold'
             >
                 What now ?
             </Typography>

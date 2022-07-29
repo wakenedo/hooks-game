@@ -41,7 +41,7 @@ const HowToPlay = () => {
                         margin='20px'
                         fontSize='44px'
                         fontWeight='bold'
-                        color='#FFFF'
+                        color='#5A3392'
                         letterSpacing={5}
                     >
                         How to Play

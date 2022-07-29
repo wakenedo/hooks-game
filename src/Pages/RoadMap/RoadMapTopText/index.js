@@ -8,7 +8,8 @@ const RoadMapTopText = () => {
                 marginTop='45px'
                 marginLeft='20px'
                 fontSize='33px'
-                color='#FFFF'
+                color='#282C34'
+                fontWeight='bold'
                 letterSpacing={5}
             >
                 What a strange and long trip this has been !
@@ -17,7 +18,7 @@ const RoadMapTopText = () => {
                 marginTop='15px'
                 marginLeft='20px'
                 fontSize='14.5px'
-                color='#FFFF'
+                color='#ffff'
                 letterSpacing={5}
                 maxWidth='1510px'
                 textAlign='justify'

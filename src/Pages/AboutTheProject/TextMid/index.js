@@ -8,8 +8,9 @@ const TextMid = () => {
                 marginTop='45px'
                 marginLeft='20px'
                 fontSize='33px'
-                color='#FFFF'
+                color='#282C34'
                 letterSpacing={5}
+                fontWeight='bold'
             >
                 A strike of inspiration !
             </Typography>
@@ -17,7 +18,7 @@ const TextMid = () => {
                 marginTop='15px'
                 marginLeft='20px'
                 fontSize='14.5px'
-                color='#FFFF'
+                color='#ffff'
                 letterSpacing={5}
                 maxWidth='855px'
                 textAlign='justify'

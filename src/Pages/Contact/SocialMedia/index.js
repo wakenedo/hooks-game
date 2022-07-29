@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Stack, Typography } from '@mui/material'
-import { Link } from 'react-router-dom'
+
 
 //Assets
 import GithubIcon from '../../../assets/Contact/githubicon.png'
@@ -53,15 +53,15 @@ const SocialMedia = () => {
                                     >
                                         GitHub:
                                     </Typography>
-                                    <Link 
-                                    to='https://github.com/wakenedo'
+                                    <a 
+                                    href='https://github.com/wakenedo'
                                     style={{
                                         textDecoration:'none',
                                         color:'#FFFFFF'
                                     }}
                                     >
                                         @wakenedo
-                                    </Link>
+                                    </a>
                                 </Typography>
                                 <Typography
                                     marginTop='5px'
@@ -84,15 +84,15 @@ const SocialMedia = () => {
                                     >
                                         LinkedIn:
                                     </Typography>
-                                    <Link 
-                                    to='https://www.linkedin.com/in/alexandre-alvarenga-developer/'
+                                    <a 
+                                    href='https://www.linkedin.com/in/alexandre-alvarenga-developer/'
                                     style={{
                                         textDecoration:'none',
                                         color:'#FFFFFF'
                                     }}
                                     >
                                         @alexandre-alvarenga-developer
-                                    </Link>
+                                    </a>
                                 </Typography>
                                 <Typography
                                     marginTop='5px'
@@ -115,15 +115,15 @@ const SocialMedia = () => {
                                     >
                                         Figma:
                                     </Typography>
-                                    <Link 
-                                    to='https://www.figma.com/?fuid='
+                                    <a 
+                                    href='https://www.figma.com/?fuid='
                                     style={{
                                         textDecoration:'none',
                                         color:'#FFFFFF'
                                     }}
                                     >
                                         @wakenedo
-                                    </Link>
+                                    </a>
                                 </Typography>
                             </Box>
                         </Stack>
@@ -159,15 +159,15 @@ const SocialMedia = () => {
                                     >
                                         Discord:
                                     </Typography>
-                                    <Link 
-                                    to='https://discord.com/'
+                                    <a 
+                                    href='https://discord.com/'
                                     style={{
                                         textDecoration:'none',
                                         color:'#FFFFFF'
                                     }}
                                     >
                                         @wakenedo
-                                    </Link>
+                                    </a>
                                 </Typography>
                             </Box>
                         </Stack>

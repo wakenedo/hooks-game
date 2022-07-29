@@ -7,8 +7,9 @@ const WhyDonate = () => {
             <Typography
                 marginLeft='100px'
                 fontSize='33px'
-                color='#FFFF'
+                color='#282C34'
                 letterSpacing={5}
+                fontWeight='bold'
             >
                 Why donate to the project ?
             </Typography>

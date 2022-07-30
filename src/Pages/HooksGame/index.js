@@ -1,15 +1,11 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import { Box, Button, Typography, Stack } from '@mui/material'
-
-//Assets
-import Ball from '../../assets/svg/basketball-svgrepo-com.svg'
+import { Box, Typography, Stack } from '@mui/material'
 
 //Components
 import NavBar from '../../components/NavBar'
 import SideBar from '../../components/SideBar'
 
 //InnerComponents
-import Title from './Title'
 import PointsLog from './PointsLog'
 import ComboLog from './ComboLog'
 import Score from './Score'
@@ -87,7 +83,6 @@ const HooksGame = () => {
 
         return backgroundColor
     }
-
     const marginTopLow = () => {
         if (backgroundColor === '#ffeb33') {
             setMarginTop('18px')
@@ -672,17 +667,17 @@ const HooksGame = () => {
         >
             <NavBar toggle={toggle} />
             <SideBar isOpen={isOpen} toggle={toggle} />
-            <Game 
-            backgroundColor={backgroundColor} 
-            marginTop={marginTop} 
-            backgroundColorYellow={backgroundColorYellow}
-            backgroundColorBlue={backgroundColorBlue}
-            backgroundColorRed={backgroundColorRed}
-            marginTopHigh={marginTopHigh}
-            marginTopMid={marginTopMid}
-            marginTopLow={marginTopLow}      
+            <Game
+                backgroundColor={backgroundColor}
+                marginTop={marginTop}
+                backgroundColorYellow={backgroundColorYellow}
+                backgroundColorBlue={backgroundColorBlue}
+                backgroundColorRed={backgroundColorRed}
+                marginTopHigh={marginTopHigh}
+                marginTopMid={marginTopMid}
+                marginTopLow={marginTopLow}
             />
-            <Score  points={points}/>
+            <Score points={points} />
             <Typography
                 variant='h6'
                 textAlign="center"
@@ -698,8 +693,8 @@ const HooksGame = () => {
                 <Stack
                     direction='column'
                 >
-                    <ComboLog />          
-                    <PointsLog pointsLog={pointsLog}/>
+                    <ComboLog />
+                    <PointsLog pointsLog={pointsLog} />
                 </Stack>
             </Box>
 

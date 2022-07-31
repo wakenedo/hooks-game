@@ -19,8 +19,6 @@ const HooksGame = () => {
     const [arrayOfPointsLog, setArrayOfPointsLog] = useState([])
     //const [arrayOfCombosLog, setArrayOfCombosLog] = useState([''])
 
-
-
     const blue = '#3388ff'
     const red = '#ff3333'
     const yellow = '#ffeb33'
@@ -83,33 +81,7 @@ const HooksGame = () => {
 
         return backgroundColor
     }
-    const marginTopLow = () => {
-        if (backgroundColor === '#ffeb33') {
-            setMarginTop('18px')
-        } if (marginTop !== '18px') {
-            setMarginTop('18px')
 
-        }
-        return marginTop
-    }
-    const marginTopMid = () => {
-        if (backgroundColor === '#3388ff') {
-            setMarginTop('108px')
-        } if (marginTop !== '108px') {
-            setMarginTop('108px')
-
-        }
-        return marginTop
-    }
-    const marginTopHigh = () => {
-        if (backgroundColor === '#ff3333') {
-            setMarginTop('320px')
-        } if (marginTop !== '320px') {
-            setMarginTop('320px')
-
-        }
-        return marginTop
-    }
 
 
     const superWhackCombo = useCallback(() => {
@@ -661,6 +633,7 @@ const HooksGame = () => {
     }
 
 
+
     return (
         <Box
             justifyContent='center'
@@ -669,13 +642,10 @@ const HooksGame = () => {
             <SideBar isOpen={isOpen} toggle={toggle} />
             <Game
                 backgroundColor={backgroundColor}
-                marginTop={marginTop}
                 backgroundColorYellow={backgroundColorYellow}
                 backgroundColorBlue={backgroundColorBlue}
                 backgroundColorRed={backgroundColorRed}
-                marginTopHigh={marginTopHigh}
-                marginTopMid={marginTopMid}
-                marginTopLow={marginTopLow}
+                points={points}
             />
             <Score points={points} />
             <Typography

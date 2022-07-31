@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Box } from '@mui/material'
 //Assets
 import BasketBall from '../../../../assets/svg/basketball-svgrepo-com.svg'
 
 const Ball = ({ marginTop }) => {
+    //const marginTop = useContext(marginTop)
+
     return (
         <Box
             width="100%"
@@ -12,7 +14,7 @@ const Ball = ({ marginTop }) => {
             <img
                 style={{
                     marginTop: `${marginTop}`,
-                    transition: '0.2 ease-in-out',
+                    transition: '0.2 smooth',
                     marginLeft: '520px'
                 }}
                 src={BasketBall}

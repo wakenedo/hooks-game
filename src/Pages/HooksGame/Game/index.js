@@ -7,6 +7,8 @@ import GameBackground from '../../../assets/Game/GameBackground.png'
 import Title from './Title'
 import Ball from './Ball'
 import GameMusic from './GameMusic'
+import GameSettings from './GameSettings'
+
 
 const Game = ({
     backgroundColor,
@@ -50,8 +52,6 @@ const Game = ({
     return (
         <Box>
             <Box
-                backgroundImage={GameBackground}
-
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -59,7 +59,7 @@ const Game = ({
                     height: '600px',
                     maxHeight: 'fit-content',
                     backgroundColor: `${backgroundColor}`,
-                    backgroundImage: `${GameBackground}`,
+                    backgroundImage: `url(${GameBackground})`,
                     margin: '20px auto',
                     borderRadius: '10px'
                 }}
@@ -75,9 +75,13 @@ const Game = ({
                         <Title />
                     </Box>
                     <Box
-                        marginLeft='320px'
+                        marginLeft='250px'
+                        display='flex'
+                        alignItems='center'
                     >
+                        <GameSettings />
                         <GameMusic />
+
                     </Box>
                 </Box>
 
@@ -135,7 +139,6 @@ const Game = ({
                 </Box>
                 <Ball marginTop={marginTop} />
             </Box>
-
         </Box>
     )
 }

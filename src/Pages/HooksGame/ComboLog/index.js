@@ -2,6 +2,13 @@ import React from 'react'
 import { Box, Typography, Stack } from '@mui/material'
 
 const ComboLog = () => {
+
+    //How to do it 
+    const combosLog = () => {
+
+
+    }
+    combosLog()
     return (
         <Box
             sx={{

@@ -31,7 +31,7 @@ const GameMusic = () => {
       <Button
         onClick={() => toggleMusic()}
       >
-        {music === true ? <img src={MusicButton} /> : <img src={MusicButtonOff} />}
+        {music === true ? <img alt='MusicButtonOn' src={MusicButton} /> : <img alt='MusicButtonOff' src={MusicButtonOff} />}
       </Button>
     </Box>
   )

@@ -37,6 +37,8 @@ const PointsLog = ({ points }) => {
                 borderRadius: '5px',
             }}>
             <Typography
+                fontFamily='Mouse Memoirs, sans-serif;'
+                fontSize='25px'
                 textAlign='center'
                 margin='4px auto'
                 sx={{
@@ -45,10 +47,12 @@ const PointsLog = ({ points }) => {
                 }}
             >
 
-                Points Log:
+                Points Log :
                 <Stack>
                     {pointsLog((point) => {
-                        <Typography>{point}</Typography>
+                        <Typography
+                            fontFamily='Mouse Memoirs, sans-serif;'
+                        >{point}</Typography>
                     })}
                 </Stack>
             </Typography>

@@ -610,12 +610,6 @@ const HooksGame = () => {
                 points={points}
             />
             <Score points={points} />
-            <Typography
-                variant='h6'
-                textAlign="center"
-            >
-                Background Color : {backgroundColor}
-            </Typography>
             <Box
                 position="absolute"
                 top='0'

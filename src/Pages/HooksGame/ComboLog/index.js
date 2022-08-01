@@ -21,6 +21,8 @@ const ComboLog = () => {
                 borderRadius: '5px',
             }}>
             <Typography
+                fontFamily='Mouse Memoirs, sans-serif;'
+                fontSize='25px'
                 textAlign='center'
                 margin='4px auto'
                 color='#fff'
@@ -29,8 +31,9 @@ const ComboLog = () => {
                     flexDirection: 'column',
                 }}
             >
-                Combo Logs:
+                Combo Logs :
                 <Typography
+                    fontFamily='Mouse Memoirs, sans-serif;'
                     color='#fff'>
                     teste
                 </Typography>

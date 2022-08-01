@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Button } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 
 import GameBackground from '../../../assets/Game/GameBackground.png'
 
@@ -14,7 +14,11 @@ const Game = ({
     backgroundColorRed,
     backgroundColorBlue,
 }) => {
+
+
+
     const [marginTop, setMarginTop] = useState('320px')
+
     const marginTopLow = () => {
         if (backgroundColor === '#ffeb33') {
             setMarginTop('18px')
@@ -54,8 +58,8 @@ const Game = ({
                     height: '600px',
                     maxHeight: 'fit-content',
                     backgroundColor: `${backgroundColor}`,
-                    margin: '20px auto'
-
+                    margin: '20px auto',
+                    borderRadius: '10px'
                 }}
             >
                 <Box
@@ -74,7 +78,9 @@ const Game = ({
                         <GameMusic />
                     </Box>
                 </Box>
+
                 <Button
+
                     onClick={() => backgroundColorYellow(marginTopLow())}
                     sx={{
                         color: '#000000',
@@ -82,7 +88,14 @@ const Game = ({
                         fontWeight: 'bold'
                     }}
                 >
-                    Yellow !
+
+                    <Typography
+                        fontFamily='Mouse Memoirs, sans-serif;'
+                        fontSize='21px'
+                    >
+                        Yellow !
+                    </Typography>
+
                 </Button>
                 <Button
                     onClick={() => backgroundColorBlue(marginTopMid())}
@@ -92,7 +105,13 @@ const Game = ({
                         fontWeight: 'bold'
                     }}
                 >
-                    Blue !
+                    <Typography
+                        fontFamily='Mouse Memoirs, sans-serif;'
+                        fontSize='21px'
+                    >
+
+                        Blue !
+                    </Typography>
                 </Button>
                 <Button
                     onClick={() => backgroundColorRed(marginTopHigh())}
@@ -102,7 +121,13 @@ const Game = ({
                         fontWeight: 'bold'
                     }}
                 >
-                    Red !
+                    <Typography
+                        fontFamily='Mouse Memoirs, sans-serif;'
+                        fontSize='21px'
+                    >
+
+                        Red !
+                    </Typography>
                 </Button>
                 <Box>
                 </Box>

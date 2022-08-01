@@ -1,10 +1,9 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Box } from '@mui/material'
 //Assets
 import BasketBall from '../../../../assets/svg/basketball-svgrepo-com.svg'
 
 const Ball = ({ marginTop }) => {
-    //const marginTop = useContext(marginTop)
 
     return (
         <Box

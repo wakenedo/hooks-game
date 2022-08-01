@@ -12,12 +12,15 @@ import Score from './Score'
 import Game from './Game'
 
 const HooksGame = () => {
+    const [isOpen, setIsOpen] = useState(false);
     const [backgroundColor, setBackgroundColor] = useState('#ffeb33')
-    const [marginTop, setMarginTop] = useState('320px')
     const [points, setPoints] = useState(0)
     const [array, setArray] = useState([])
-    const [arrayOfPointsLog, setArrayOfPointsLog] = useState([])
     //const [arrayOfCombosLog, setArrayOfCombosLog] = useState([''])
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    }
 
     const blue = '#3388ff'
     const red = '#ff3333'
@@ -38,7 +41,6 @@ const HooksGame = () => {
 
 
     console.log('Background log:', backgroundColor)
-    console.log('Margin log', marginTop,)
 
     const backgroundColorYellow = () => {
 
@@ -81,8 +83,6 @@ const HooksGame = () => {
 
         return backgroundColor
     }
-
-
 
     const superWhackCombo = useCallback(() => {
         for (var x = 0; x < _superWhack1.length; x++) {
@@ -554,34 +554,6 @@ const HooksGame = () => {
         }
     }, [points, superCombo])
 
-
-
-
-    const pointsLog = () => {
-        let arr = arrayOfPointsLog
-        for (let i = 0; i <= points; i++) {
-            if (i !== points) {
-                return points
-            }
-
-            arr.map((point) => {
-                return point
-            })
-            arr.push(points.toString())
-
-
-            return arr[i]
-        }
-    }
-    pointsLog()
-
-    //How to do it 
-    const combosLog = () => {
-
-
-    }
-    combosLog()
-
     // Iterating on Whack Points
     useEffect(() => {
         whackPoints()
@@ -623,16 +595,6 @@ const HooksGame = () => {
     console.log('Points log:', points)
     console.log('Array log:', array.length, array)
     console.log('Change background-color log:', backgroundColor,)
-    console.log('pointsLog log:', pointsLog(),)
-
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggle = () => {
-        setIsOpen(!isOpen);
-    }
-
-
 
     return (
         <Box
@@ -664,7 +626,7 @@ const HooksGame = () => {
                     direction='column'
                 >
                     <ComboLog />
-                    <PointsLog pointsLog={pointsLog} />
+                    <PointsLog points={points} />
                 </Stack>
             </Box>
 

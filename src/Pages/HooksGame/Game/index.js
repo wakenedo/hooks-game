@@ -13,7 +13,6 @@ const Game = ({
     backgroundColorYellow,
     backgroundColorRed,
     backgroundColorBlue,
-    points,
 }) => {
     const [marginTop, setMarginTop] = useState('320px')
     const marginTopLow = () => {
@@ -43,6 +42,7 @@ const Game = ({
         }
         return marginTop
     }
+    console.log('Margin log', marginTop,)
     return (
         <Box>
             <Box

@@ -7,8 +7,11 @@ const Title = () => {
             fontSize="42px"
             textAlign="center"
             fontWeight="bold"
+            color='#5A3392'
+            textDecoration='underline'
+
         >
-           🏀 Drop the ball 🏀 
+            🏀 Drop the Ball 🏀
 
         </Typography>
     )

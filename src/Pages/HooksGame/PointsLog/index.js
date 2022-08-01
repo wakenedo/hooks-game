@@ -1,29 +1,37 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Typography, Stack } from '@mui/material'
 
 const PointsLog = ({ points }) => {
 
     const [arrayOfPointsLog, setArrayOfPointsLog] = useState([])
+    const [lastPoint, setLastPoint] = useState()
+
+
+    useEffect(() => {
+        pointsLog()
+    }, [points])
+
 
     const pointsLog = () => {
-        let arr = arrayOfPointsLog
-        for (let i = 0; i <= points; i++) {
-            if (i !== points) {
-                return points
-            }
 
-            arr.map((point) => {
-                return point
-            })
-            arr.push(points.toString())
+        if (!points) return
 
+        setLastPoint(points)
 
-            return arr[i]
+        let arr = [...arrayOfPointsLog]
+
+        const pointsObject = {
+            id: '',
+            value: arr.length ? points - lastPoint : points
         }
-    }
-    pointsLog()
 
-    console.log('pointsLog log:', pointsLog(),)
+        arr.push(pointsObject)
+
+        setArrayOfPointsLog(arr)
+
+        console.log('Arr:', arr, 'Points :', points)
+    }
+
     return (
         <Box
             marginTop='12px'
@@ -49,10 +57,12 @@ const PointsLog = ({ points }) => {
 
                 Points Log :
                 <Stack>
-                    {pointsLog((point) => {
-                        <Typography
-                            fontFamily='Mouse Memoirs, sans-serif;'
-                        >{point}</Typography>
+                    {arrayOfPointsLog.map((item) => {
+                        return (
+                            <Typography
+                                key={item.id}
+                            >{item.value}</Typography>
+                        )
                     })}
                 </Stack>
             </Typography>

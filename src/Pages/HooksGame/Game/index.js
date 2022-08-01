@@ -8,6 +8,7 @@ import Title from './Title'
 import Ball from './Ball'
 import GameMusic from './GameMusic'
 import GameSettings from './GameSettings'
+import Timer from './Timer'
 
 
 const Game = ({
@@ -15,17 +16,18 @@ const Game = ({
     backgroundColorYellow,
     backgroundColorRed,
     backgroundColorBlue,
+    points,
 }) => {
 
 
 
-    const [marginTop, setMarginTop] = useState('320px')
+    const [marginTop, setMarginTop] = useState('315px')
 
     const marginTopLow = () => {
         if (backgroundColor === '#ffeb33') {
-            setMarginTop('18px')
-        } if (marginTop !== '18px') {
-            setMarginTop('18px')
+            setMarginTop('25px')
+        } if (marginTop !== '25px') {
+            setMarginTop('25px')
 
         }
         return marginTop
@@ -41,9 +43,9 @@ const Game = ({
     }
     const marginTopHigh = () => {
         if (backgroundColor === '#ff3333') {
-            setMarginTop('320px')
-        } if (marginTop !== '320px') {
-            setMarginTop('320px')
+            setMarginTop('315px')
+        } if (marginTop !== '315px') {
+            setMarginTop('315px')
 
         }
         return marginTop
@@ -64,6 +66,7 @@ const Game = ({
                     borderRadius: '10px'
                 }}
             >
+                <Timer points={points} />
                 <Box
                     display='flex'
                     alignItems='center'
@@ -138,7 +141,9 @@ const Game = ({
                 <Box>
                 </Box>
                 <Ball marginTop={marginTop} />
+
             </Box>
+
         </Box>
     )
 }

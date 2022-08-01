@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { Box, Button } from '@mui/material'
 
+import GameBackground from '../../../assets/Game/GameBackground.png'
+
 //Inner Component
 import Title from './Title'
 import Ball from './Ball'
+import GameMusic from './GameMusic'
 
 const Game = ({
     backgroundColor,
@@ -43,6 +46,7 @@ const Game = ({
     return (
         <Box>
             <Box
+                backgroundImage={GameBackground}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -54,7 +58,22 @@ const Game = ({
 
                 }}
             >
-                <Title />
+                <Box
+                    display='flex'
+                    alignItems='center'
+                    width='1200px'
+                >
+                    <Box
+                        marginLeft='400px'
+                    >
+                        <Title />
+                    </Box>
+                    <Box
+                        marginLeft='320px'
+                    >
+                        <GameMusic />
+                    </Box>
+                </Box>
                 <Button
                     onClick={() => backgroundColorYellow(marginTopLow())}
                     sx={{
@@ -89,6 +108,7 @@ const Game = ({
                 </Box>
                 <Ball marginTop={marginTop} />
             </Box>
+
         </Box>
     )
 }

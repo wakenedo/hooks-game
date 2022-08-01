@@ -33,6 +33,7 @@ const ComboLog = () => {
             >
                 Combo Logs :
                 <Typography
+                    fontSize='20px'
                     fontFamily='Mouse Memoirs, sans-serif;'
                     color='#fff'>
                     teste

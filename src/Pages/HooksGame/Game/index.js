@@ -51,6 +51,7 @@ const Game = ({
         <Box>
             <Box
                 backgroundImage={GameBackground}
+
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -58,6 +59,7 @@ const Game = ({
                     height: '600px',
                     maxHeight: 'fit-content',
                     backgroundColor: `${backgroundColor}`,
+                    backgroundImage: `${GameBackground}`,
                     margin: '20px auto',
                     borderRadius: '10px'
                 }}
@@ -93,7 +95,7 @@ const Game = ({
                         fontFamily='Mouse Memoirs, sans-serif;'
                         fontSize='21px'
                     >
-                        Yellow !
+                        Top !
                     </Typography>
 
                 </Button>
@@ -110,7 +112,7 @@ const Game = ({
                         fontSize='21px'
                     >
 
-                        Blue !
+                        Mid !
                     </Typography>
                 </Button>
                 <Button
@@ -126,7 +128,7 @@ const Game = ({
                         fontSize='21px'
                     >
 
-                        Red !
+                        Bottom !
                     </Typography>
                 </Button>
                 <Box>

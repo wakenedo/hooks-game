@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Button } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 
 import GameBackground from '../../../assets/Game/GameBackground.png'
 
@@ -7,6 +7,8 @@ import GameBackground from '../../../assets/Game/GameBackground.png'
 import Title from './Title'
 import Ball from './Ball'
 import GameMusic from './GameMusic'
+import GameSettings from './GameSettings'
+
 
 const Game = ({
     backgroundColor,
@@ -14,7 +16,11 @@ const Game = ({
     backgroundColorRed,
     backgroundColorBlue,
 }) => {
+
+
+
     const [marginTop, setMarginTop] = useState('320px')
+
     const marginTopLow = () => {
         if (backgroundColor === '#ffeb33') {
             setMarginTop('18px')
@@ -46,7 +52,6 @@ const Game = ({
     return (
         <Box>
             <Box
-                backgroundImage={GameBackground}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -54,8 +59,9 @@ const Game = ({
                     height: '600px',
                     maxHeight: 'fit-content',
                     backgroundColor: `${backgroundColor}`,
-                    margin: '20px auto'
-
+                    backgroundImage: `url(${GameBackground})`,
+                    margin: '20px auto',
+                    borderRadius: '10px'
                 }}
             >
                 <Box
@@ -69,12 +75,18 @@ const Game = ({
                         <Title />
                     </Box>
                     <Box
-                        marginLeft='320px'
+                        marginLeft='250px'
+                        display='flex'
+                        alignItems='center'
                     >
+                        <GameSettings />
                         <GameMusic />
+
                     </Box>
                 </Box>
+
                 <Button
+
                     onClick={() => backgroundColorYellow(marginTopLow())}
                     sx={{
                         color: '#000000',
@@ -82,7 +94,14 @@ const Game = ({
                         fontWeight: 'bold'
                     }}
                 >
-                    Yellow !
+
+                    <Typography
+                        fontFamily='Mouse Memoirs, sans-serif;'
+                        fontSize='21px'
+                    >
+                        Top !
+                    </Typography>
+
                 </Button>
                 <Button
                     onClick={() => backgroundColorBlue(marginTopMid())}
@@ -92,7 +111,13 @@ const Game = ({
                         fontWeight: 'bold'
                     }}
                 >
-                    Blue !
+                    <Typography
+                        fontFamily='Mouse Memoirs, sans-serif;'
+                        fontSize='21px'
+                    >
+
+                        Mid !
+                    </Typography>
                 </Button>
                 <Button
                     onClick={() => backgroundColorRed(marginTopHigh())}
@@ -102,13 +127,18 @@ const Game = ({
                         fontWeight: 'bold'
                     }}
                 >
-                    Red !
+                    <Typography
+                        fontFamily='Mouse Memoirs, sans-serif;'
+                        fontSize='21px'
+                    >
+
+                        Bottom !
+                    </Typography>
                 </Button>
                 <Box>
                 </Box>
                 <Ball marginTop={marginTop} />
             </Box>
-
         </Box>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, Stack } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 const ComboLog = () => {
 
@@ -21,6 +21,8 @@ const ComboLog = () => {
                 borderRadius: '5px',
             }}>
             <Typography
+                fontFamily='Mouse Memoirs, sans-serif;'
+                fontSize='25px'
                 textAlign='center'
                 margin='4px auto'
                 color='#fff'
@@ -29,8 +31,10 @@ const ComboLog = () => {
                     flexDirection: 'column',
                 }}
             >
-                Combo Logs:
+                Combo Logs :
                 <Typography
+                    fontSize='20px'
+                    fontFamily='Mouse Memoirs, sans-serif;'
                     color='#fff'>
                     teste
                 </Typography>

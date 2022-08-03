@@ -104,8 +104,6 @@ const HooksGame = () => {
                             console.log('_superWhack1',)
                         }
                         return true
-
-
                     }
 
                 }

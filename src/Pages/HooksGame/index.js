@@ -587,7 +587,7 @@ const HooksGame = () => {
         setArray(array)
         //setArray( arr => [...arr, `${backgroundColor}`]);
 
-    }, [backgroundColor])
+    }, [backgroundColor, array])
 
     console.log('Points log:', points)
     console.log('Array log:', array.length, array)

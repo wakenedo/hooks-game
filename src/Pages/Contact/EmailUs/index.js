@@ -36,7 +36,7 @@ const EmailUs = () => {
       setEmail('');
       setMessage('');
       setEmailSent(true);
-      alert('💌 E-mail Sent Successfully')
+      alert('💌 E-mail Sent Successfully', emailSent)
     } else {
       alert('🏀 Please fill in all fields. 🏀');
     }

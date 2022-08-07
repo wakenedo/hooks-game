@@ -62,6 +62,9 @@ const ComboLog = ({ array }) => {
                         return (
                             <Typography
                                 key={item.id}
+                                fontSize='25px'
+                                fontFamily='Mouse Memoirs, sans-serif;'
+
                             >
                                 {item.value}
                             </Typography>

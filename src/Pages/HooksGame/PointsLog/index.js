@@ -62,7 +62,11 @@ const PointsLog = ({ points }) => {
                         return (
                             <Typography
                                 key={item.id}
-                            >{item.value}</Typography>
+                                fontSize='28px'
+                                fontFamily='Mouse Memoirs, sans-serif;'
+                            >
+                                {item.value}
+                            </Typography>
                         )
                     })}
                 </Stack>

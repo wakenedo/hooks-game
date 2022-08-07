@@ -30,6 +30,7 @@ const PointsLog = ({ points }) => {
         setArrayOfPointsLog(arr)
 
         console.log('Arr:', arr, 'Points :', points)
+
     }
 
     return (

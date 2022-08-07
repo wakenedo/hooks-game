@@ -16,7 +16,6 @@ const HooksGame = () => {
     const [backgroundColor, setBackgroundColor] = useState('#ffeb33')
     const [points, setPoints] = useState(0)
     const [array, setArray] = useState([])
-    //const [arrayOfCombosLog, setArrayOfCombosLog] = useState([''])
 
     const toggle = () => {
         setIsOpen(!isOpen);
@@ -617,7 +616,7 @@ const HooksGame = () => {
                 <Stack
                     direction='column'
                 >
-                    <ComboLog />
+                    <ComboLog array={array} />
                     <PointsLog points={points} />
                 </Stack>
             </Box>

@@ -1,14 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Typography } from '@mui/material'
 
-const ComboLog = () => {
+const ComboLog = ({ array }) => {
 
-    //How to do it 
+    const [arrayOfCombosLog, setArrayOfCombosLog] = useState([])
+    const [lastCombo, setLastCombo] = useState()
+
+    useEffect(() => {
+        combosLog()
+    }, [array])
+
     const combosLog = () => {
+        if (!array) return
 
+        setLastCombo(array)
+
+        let arr = [...arrayOfCombosLog]
+
+        const combosObject = {
+            id: '',
+            value: arr.length ? array - lastCombo : array
+        }
+
+        arr.push(combosObject)
+
+        setArrayOfCombosLog(arr)
+
+        console.log('ComboArr:', arr, 'Array:', array)
 
     }
-    combosLog()
+
     return (
         <Box
             sx={{
@@ -35,8 +56,17 @@ const ComboLog = () => {
                 <Typography
                     fontSize='20px'
                     fontFamily='Mouse Memoirs, sans-serif;'
-                    color='#fff'>
-                    teste
+                    color='#fff'
+                >
+                    {arrayOfCombosLog.map((item) => {
+                        return (
+                            <Typography
+                                key={item.id}
+                            >
+                                {item.value}
+                            </Typography>
+                        )
+                    })}
                 </Typography>
             </Typography>
         </Box>

@@ -6,10 +6,10 @@ import { Stack, Box, Typography } from '@mui/material'
 import BallIcon from '../../assets/svg/ball-svgrepo-com.svg'
 
 const SideBar = ({ isOpen, toggle }) => {
-    const [active, setActive] = useState(true)
+    const [active, setActive] = useState(false)
 
     const hover = () => {
-        setActive(false);
+        setActive(true);
     }
 
 
@@ -39,17 +39,20 @@ const SideBar = ({ isOpen, toggle }) => {
                 margin='auto'
                 display='flex'
                 flexDirection='column'
+                alignItems='center'
+
             >
                 <Box
                     display='flex'
                     flexDirection='row'
-                    margin='25px auto 13px'
-                    width={215}
                     justifyContent='space-between'
-
-
+                    marginBottom='25px'
                 >
-                    {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    <Box
+                        marginRight='10px'
+                    >
+                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    </Box>
 
                     <Link
                         to='/About'
@@ -62,9 +65,12 @@ const SideBar = ({ isOpen, toggle }) => {
                             color='#282C34'
                             fontWeight='bold'
                             fontSize='18px'
+
                             sx={{
                                 '&:hover': {
                                     color: '#5A3392',
+                                    active: `${hover}`
+
                                 }
                             }}
                         >
@@ -75,11 +81,14 @@ const SideBar = ({ isOpen, toggle }) => {
                 <Box
                     display='flex'
                     flexDirection='row'
-                    margin='25px auto 13px'
-                    width={215}
                     justifyContent='space-between'
+                    marginBottom='25px'
                 >
-                    {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    <Box
+                        marginRight='10px'
+                    >
+                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    </Box>
                     <Link
                         to='/Road_Map'
                         style={{
@@ -103,11 +112,14 @@ const SideBar = ({ isOpen, toggle }) => {
                 <Box
                     display='flex'
                     flexDirection='row'
-                    margin='25px auto 13px'
-                    width={215}
                     justifyContent='space-between'
+                    marginBottom='25px'
                 >
-                    {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    <Box
+                        marginRight='10px'
+                    >
+                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    </Box>
                     <Link
                         to='/How_To_Play'
                         style={{
@@ -131,11 +143,14 @@ const SideBar = ({ isOpen, toggle }) => {
                 <Box
                     display='flex'
                     flexDirection='row'
-                    margin='25px auto 13px'
-                    width={215}
                     justifyContent='space-between'
+                    marginBottom='25px'
                 >
-                    {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    <Box
+                        marginRight='10px'
+                    >
+                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    </Box>
                     <Link
                         to='/Combo_List'
                         style={{
@@ -159,11 +174,14 @@ const SideBar = ({ isOpen, toggle }) => {
                 <Box
                     display='flex'
                     flexDirection='row'
-                    margin='25px auto 13px'
-                    width={215}
                     justifyContent='space-between'
+                    marginBottom='25px'
                 >
-                    {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    <Box
+                        marginRight='10px'
+                    >
+                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    </Box>
                     <Link
                         to='/Contact'
                         style={{
@@ -187,11 +205,13 @@ const SideBar = ({ isOpen, toggle }) => {
                 <Box
                     display='flex'
                     flexDirection='row'
-                    margin='25px auto 13px'
-                    width={215}
                     justifyContent='space-between'
                 >
-                    {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    <Box
+                        marginRight='10px'
+                    >
+                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+                    </Box>
                     <Link
                         to='/Donate'
                         style={{

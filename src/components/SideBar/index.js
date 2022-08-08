@@ -6,10 +6,11 @@ import { Stack, Box, Typography } from '@mui/material'
 import BallIcon from '../../assets/svg/ball-svgrepo-com.svg'
 
 const SideBar = ({ isOpen, toggle }) => {
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState(true)
 
     const hover = () => {
-        setActive(true);
+        setActive(false);
+        return active
     }
 
 
@@ -49,7 +50,8 @@ const SideBar = ({ isOpen, toggle }) => {
                     marginBottom='25px'
                 >
                     <Box
-                        marginRight='10px'
+                        width='90px'
+                        paddingLeft='10px'
                     >
                         {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
                     </Box>
@@ -69,8 +71,6 @@ const SideBar = ({ isOpen, toggle }) => {
                             sx={{
                                 '&:hover': {
                                     color: '#5A3392',
-                                    active: `${hover}`
-
                                 }
                             }}
                         >
@@ -85,7 +85,7 @@ const SideBar = ({ isOpen, toggle }) => {
                     marginBottom='25px'
                 >
                     <Box
-                        marginRight='10px'
+                        width='145px'
                     >
                         {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
                     </Box>
@@ -116,7 +116,7 @@ const SideBar = ({ isOpen, toggle }) => {
                     marginBottom='25px'
                 >
                     <Box
-                        marginRight='10px'
+                        width='110px'
                     >
                         {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
                     </Box>
@@ -147,7 +147,7 @@ const SideBar = ({ isOpen, toggle }) => {
                     marginBottom='25px'
                 >
                     <Box
-                        marginRight='10px'
+                        width='110px'
                     >
                         {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
                     </Box>
@@ -178,7 +178,7 @@ const SideBar = ({ isOpen, toggle }) => {
                     marginBottom='25px'
                 >
                     <Box
-                        marginRight='10px'
+                        width='165px'
                     >
                         {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
                     </Box>
@@ -208,7 +208,7 @@ const SideBar = ({ isOpen, toggle }) => {
                     justifyContent='space-between'
                 >
                     <Box
-                        marginRight='10px'
+                        width='165px'
                     >
                         {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
                     </Box>

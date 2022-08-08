@@ -6,10 +6,10 @@ import { Stack, Box, Typography } from '@mui/material'
 import BallIcon from '../../assets/svg/ball-svgrepo-com.svg'
 
 const SideBar = ({ isOpen, toggle }) => {
-    const [active, setActive] = useState(true)
+    const [active, setActive] = useState(false)
 
     const hover = () => {
-        setActive(false);
+        setActive(true);
         return active
     }
 
@@ -71,6 +71,9 @@ const SideBar = ({ isOpen, toggle }) => {
                             sx={{
                                 '&:hover': {
                                     color: '#5A3392',
+                                },
+                                '&:active': {
+                                    active: `${hover}`
                                 }
                             }}
                         >

@@ -21,7 +21,7 @@ const GameMusic = () => {
   return (
     <Box>
       <ReactPlayer
-        url='https://www.youtube.com/watch?v=R4PxoAF5pRQ'
+        url='https://www.youtube.com/watch?v=um_yP-2ix9k'
         playing={music}
         loop={true}
         width={0}

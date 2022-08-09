@@ -35,6 +35,10 @@ const HooksGame = () => {
     const red = '#ff3333'
     const yellow = '#ffeb33'
 
+
+    //Maybe the errors are coming from the verifications 
+    //since they're all using same logic and kinda of simple one, 
+    ///that might not be correct for all verifications
     const regularCombo1 = useMemo(() => [yellow, blue, red], [])
     const regularCombo2 = useMemo(() => [red, blue, yellow], [])
     const weirdCombo1 = useMemo(() => [blue, yellow, red], []) // Not working properly iterating 2 times
@@ -49,7 +53,7 @@ const HooksGame = () => {
     const _superWhack1 = useMemo(() => [blue, yellow, blue, yellow], []) //iterating non-stop
 
 
-    console.log('Background log:', backgroundColor)
+    // console.log('Background log:', backgroundColor)
 
     const backgroundColorYellow = () => {
 
@@ -101,7 +105,7 @@ const HooksGame = () => {
                         if (points <= 0) {
                             setArray([])
                             setPoints(0)
-                            console.log('_superWhack1',)
+                            // console.log('_superWhack1',)
                         }
                         return true
                     }
@@ -113,7 +117,7 @@ const HooksGame = () => {
         }
 
 
-        console.log('super whack test', array, _superWhack1)
+        // console.log('super whack test', array, _superWhack1)
         return false
 
 
@@ -125,7 +129,7 @@ const HooksGame = () => {
             if (array[1] === whackCombo1[1]) {
                 if (array[2] === whackCombo1[2]) {
                     setArray([])
-                    console.log('whackCombo1',)
+                    // console.log('whackCombo1',)
                 }
                 return true
             }
@@ -134,14 +138,14 @@ const HooksGame = () => {
             if (array[1] === whackCombo2[1]) {
                 if (array[2] === whackCombo2[2]) {
                     setArray([])
-                    console.log('whackCombo2',)
+                    // console.log('whackCombo2',)
                 }
                 return true
             }
 
         }
 
-        console.log('whack test', array, whackCombo1)
+        // console.log('whack test', array, whackCombo1)
         return false
 
 
@@ -153,7 +157,7 @@ const HooksGame = () => {
             if (array[1] === weakestCombo1[1]) {
                 if (array[2] === weakestCombo1[2]) {
                     setArray([])
-                    console.log('weakestCombo1',)
+                    // console.log('weakestCombo1',)
                 }
                 return true
             }
@@ -162,14 +166,14 @@ const HooksGame = () => {
             if (array[1] === weakestCombo2[1]) {
                 if (array[2] === weakestCombo2[2]) {
                     setArray([])
-                    console.log('weakestCombo2',)
+                    // console.log('weakestCombo2',)
                 }
                 return true
             }
 
         }
 
-        console.log('weak test', array, weakestCombo1)
+        // console.log('weak test', array, weakestCombo1)
         return false
 
 
@@ -181,7 +185,7 @@ const HooksGame = () => {
             if (array[1] === weakCombo1[1]) {
                 if (array[2] === weakCombo1[2]) {
                     setArray([])
-                    console.log('weakCombo1',)
+                    // console.log('weakCombo1',)
                 }
                 return true
             }
@@ -190,14 +194,14 @@ const HooksGame = () => {
             if (array[1] === weakCombo2[1]) {
                 if (array[2] === weakCombo2[2]) {
                     setArray([])
-                    console.log('weakCombo2',)
+                    // console.log('weakCombo2',)
                 }
                 return true
             }
 
         }
 
-        console.log('weak test', array, weakCombo1)
+        // console.log('weak test', array, weakCombo1)
         return false
 
     }, [weakCombo1, weakCombo2, array])
@@ -235,7 +239,7 @@ const HooksGame = () => {
             if (array[1] === regularCombo1[1]) {
                 if (array[2] === regularCombo1[2]) {
                     setArray([])
-                    console.log('regularCombo1')
+                    // console.log('regularCombo1')
                 }
                 return true
             }
@@ -244,13 +248,13 @@ const HooksGame = () => {
             if (array[1] === regularCombo2[1]) {
                 if (array[2] === regularCombo2[2]) {
                     setArray([])
-                    console.log('regularCombo2',)
+                    // console.log('regularCombo2',)
                 }
                 return true
             }
 
         }
-        console.log('regular test', array, regularCombo1)
+        // console.log('regular test', array, regularCombo1)
         return false
     }, [regularCombo1, regularCombo2, array])
     regularCombo()
@@ -261,14 +265,14 @@ const HooksGame = () => {
                 if (array[2] === _superCombo1[2]) {
                     if (array[3] === _superCombo1[3]) {
                         setArray([])
-                        console.log('_superCombo',)
+                        // console.log('_superCombo',)
 
                         return true
                     }
                 }
             }
         }
-        console.log(' super combo test', array, _superCombo1)
+        // console.log(' super combo test', array, _superCombo1)
         return false
 
     }, [_superCombo1, array])
@@ -302,9 +306,9 @@ const HooksGame = () => {
         setArray(array)
     }, [backgroundColor, setArray])
 
-    console.log('Points log:', points)
-    console.log('Array log:', array.length, array)
-    console.log('Change background-color log:', backgroundColor,)
+    // console.log('Points log:', points)
+    // console.log('Array log:', array.length, array)
+    // console.log('Change background-color log:', backgroundColor,)
 
     return (
         <Box

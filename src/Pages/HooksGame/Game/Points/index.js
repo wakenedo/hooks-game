@@ -7,11 +7,11 @@ export const whackPoints = (points, setPoints, whackCombo) => {
     var verification3 = points !== pointsAdded
 
 
-    console.log('pointsAdded log:', pointsAdded,)
-    console.log('addPoints log:', addPoints,)
-    console.log('points log:', points)
+    // console.log('pointsAdded log:', pointsAdded,)
+    // console.log('addPoints log:', addPoints,)
+    // console.log('points log:', points)
 
-    console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
+    // console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
     if (verification2) {
@@ -37,11 +37,11 @@ export const weakestPoints = (points, setPoints, weakestCombo) => {
     var verification3 = points !== pointsAdded
 
 
-    console.log('pointsAdded log:', pointsAdded,)
-    console.log('addPoints log:', addPoints,)
-    console.log('points log:', points)
+    // console.log('pointsAdded log:', pointsAdded,)
+    // console.log('addPoints log:', addPoints,)
+    // console.log('points log:', points)
 
-    console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
+    // console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
     if (verification2) {
@@ -67,11 +67,11 @@ export const weakPoints = (points, setPoints, weakCombo) => {
     var verification3 = points !== pointsAdded
 
 
-    console.log('pointsAdded log:', pointsAdded,)
-    console.log('addPoints log:', addPoints,)
-    console.log('points log:', points)
+    // console.log('pointsAdded log:', pointsAdded,)
+    // console.log('addPoints log:', addPoints,)
+    // console.log('points log:', points)
 
-    console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
+    // console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
     if (verification2) {
@@ -126,11 +126,11 @@ export const regularPoints = (points, setPoints, regularCombo) => {
     var verification3 = points !== pointsAdded
 
 
-    console.log('pointsAdded log:', pointsAdded,)
-    console.log('addPoints log:', addPoints,)
-    console.log('points log:', points)
+    // console.log('pointsAdded log:', pointsAdded,)
+    // console.log('addPoints log:', addPoints,)
+    // console.log('points log:', points)
 
-    console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
+    // console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
     if (verification2) {
@@ -156,11 +156,11 @@ export const superPoints = (points, setPoints, superCombo) => {
     var verification3 = points !== pointsAdded
 
 
-    console.log('pointsAdded log:', pointsAdded,)
-    console.log('addPoints log:', addPoints,)
-    console.log('points log:', points)
+    // console.log('pointsAdded log:', pointsAdded,)
+    // console.log('addPoints log:', addPoints,)
+    // console.log('points log:', points)
 
-    console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
+    // console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
     if (verification2) {
@@ -186,11 +186,11 @@ export const superWhackPoints = (points, superWhackCombo, setPoints) => {
     var verification3 = points !== pointsAdded
 
 
-    console.log('pointsAdded log:', pointsAdded,)
-    console.log('addPoints log:', addPoints,)
-    console.log('points log:', points)
+    // console.log('pointsAdded log:', pointsAdded,)
+    // console.log('addPoints log:', addPoints,)
+    // console.log('points log:', points)
 
-    console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
+    // console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
     if (verification2) {

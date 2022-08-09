@@ -1,6 +1,16 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { Box, Stack } from '@mui/material'
 
+import {
+    superWhackPoints,
+    whackPoints,
+    weakestPoints,
+    weakPoints,
+    weirdPoints,
+    regularPoints,
+    superPoints
+} from './Game/Points'
+
 //Components
 import NavBar from '../../components/NavBar'
 import SideBar from '../../components/SideBar'
@@ -84,15 +94,6 @@ const HooksGame = () => {
     }
 
     const superWhackCombo = useCallback(() => {
-        for (var x = 0; x < _superWhack1.length; x++) {
-
-            // console.log(x, _superWhack1[x])
-        }
-        for (var x1 = 0; x1 < array.length; x1++) {
-
-            // console.log(i, array[i],)
-        }
-
         if (array[0] === _superWhack1[0]) {
             if (array[1] === _superWhack1[1]) {
                 if (array[2] === _superWhack1[2]) {
@@ -120,16 +121,6 @@ const HooksGame = () => {
     superWhackCombo()
 
     const whackCombo = useCallback(() => {
-        for (var y = 0; y < whackCombo1.length; y++) {
-
-            // console.log(y, whackCombo1[y])
-        }
-        for (var y1 = 0; y1 < array.length; y1++) {
-
-            // console.log(y1, array[y1],)
-        }
-
-
         if (array[0] === whackCombo1[0]) {
             if (array[1] === whackCombo1[1]) {
                 if (array[2] === whackCombo1[2]) {
@@ -158,16 +149,6 @@ const HooksGame = () => {
     whackCombo()
 
     const weakestCombo = useCallback(() => {
-        for (var z = 0; z < weakestCombo1.length; z++) {
-
-            // console.log(z, weakestCombo1[z])
-        }
-        for (var z1 = 0; z1 < array.length; z1++) {
-
-            // console.log(z1, array[z1],)
-        }
-
-
         if (array[0] === weakestCombo1[0]) {
             if (array[1] === weakestCombo1[1]) {
                 if (array[2] === weakestCombo1[2]) {
@@ -196,16 +177,6 @@ const HooksGame = () => {
     weakestCombo()
 
     const weakCombo = useCallback(() => {
-        for (var w = 0; w < weakCombo1.length; w++) {
-
-            // console.log(w, weakCombo1[w])
-        }
-        for (var w1 = 0; w1 < array.length; w1++) {
-
-            // console.log(w1, array[w1],)
-        }
-
-
         if (array[0] === weakCombo1[0]) {
             if (array[1] === weakCombo1[1]) {
                 if (array[2] === weakCombo1[2]) {
@@ -233,15 +204,6 @@ const HooksGame = () => {
     weakCombo()
 
     const weirdCombo = useCallback(() => {
-        for (var u = 0; u < weirdCombo1.length; u++) {
-
-            // console.log(i, weirdCombo1[i])
-        }
-        for (var u1 = 0; u1 < array.length; u1++) {
-
-            // console.log(u1, array[u1],)
-        }
-
         if (array[0] === weirdCombo1[0]) {
             if (array[1] === weirdCombo1[1]) {
                 if (array[2] === weirdCombo1[2]) {
@@ -264,22 +226,13 @@ const HooksGame = () => {
         }
 
 
-        console.log('regular test', array, weirdCombo1)
+        console.log('weirdCombo test', array, weirdCombo1)
         return false
 
     }, [weirdCombo1, weirdCombo2, array])
-    weirdCombo()
+
 
     const regularCombo = useCallback(() => {
-        for (var p = 0; p < regularCombo1.length; p++) {
-
-            // console.log(p, regularCombo1[p])
-        }
-        for (var p1 = 0; p1 < array.length; p1++) {
-
-            // console.log(p1, array[p1],)
-        }
-
         if (array[0] === regularCombo1[0]) {
             if (array[1] === regularCombo1[1]) {
                 if (array[2] === regularCombo1[2]) {
@@ -300,25 +253,12 @@ const HooksGame = () => {
             }
 
         }
-
-
         console.log('regular test', array, regularCombo1)
         return false
-
     }, [regularCombo1, regularCombo2, array])
     regularCombo()
 
     const superCombo = useCallback(() => {
-        for (var f = 0; f < _superCombo1.length; f++) {
-
-            // console.log(f, _superCombo[f])
-        }
-        for (var f1 = 0; f1 < array.length; f1++) {
-
-            // console.log(f1, array[f1],)
-        }
-
-
         if (array[0] === _superCombo1[0]) {
             if (array[1] === _superCombo1[1]) {
                 if (array[2] === _superCombo1[2]) {
@@ -338,256 +278,247 @@ const HooksGame = () => {
     }, [_superCombo1, array])
     superCombo()
 
-    const superWhackPoints = useCallback(() => {
-        if (superWhackCombo(true)) {
-            var addPoints = points - 4
-            var pointsAdded = addPoints
-            var verification2 = points !== 0
-            var verification3 = points !== pointsAdded
+    // const superWhackPoints = useCallback(() => {
+    //     if (superWhackCombo(true)) {
+    //         var addPoints = points - 4
+    //         var pointsAdded = addPoints
+    //         var verification2 = points !== 0
+    //         var verification3 = points !== pointsAdded
 
 
-            console.log('pointsAdded log:', pointsAdded,)
-            console.log('addPoints log:', addPoints,)
-            console.log('points log:', points)
+    //         console.log('pointsAdded log:', pointsAdded,)
+    //         console.log('addPoints log:', addPoints,)
+    //         console.log('points log:', points)
 
-            console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
-
-
-            if (verification2) {
-                const points = pointsAdded
-                if (points < 0) {
-                    setPoints(0)
-                }
-                setPoints(points)
-                return points
-            }
-            setPoints(addPoints)
+    //         console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
-            if (verification3) {
-                return pointsAdded
-            }
-            return points
-        }
-    }, [points, superWhackCombo])
-
-    const whackPoints = useCallback(() => {
-        if (whackCombo(true)) {
-            var addPoints = points + 0
-            var pointsAdded = addPoints
-            var verification2 = points !== 0
-            var verification3 = points !== pointsAdded
+    //         if (verification2) {
+    //             const points = pointsAdded
+    //             if (points < 0) {
+    //                 setPoints(0)
+    //             }
+    //             setPoints(points)
+    //             return points
+    //         }
+    //         setPoints(addPoints)
 
 
-            console.log('pointsAdded log:', pointsAdded,)
-            console.log('addPoints log:', addPoints,)
-            console.log('points log:', points)
+    //         if (verification3) {
+    //             return pointsAdded
+    //         }
+    //         return points
+    //     }
+    // }, [points, superWhackCombo])
 
-            console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
-
-
-            if (verification2) {
-                const points = pointsAdded
-                setPoints(points)
-                return points
-            }
-            setPoints(addPoints)
-
-
-            if (verification3) {
-                return pointsAdded
-            }
-            return points
-        }
-    }, [points, whackCombo])
-
-    const weakestPoints = useCallback(() => {
-        if (weakestCombo(true)) {
-            var addPoints = points + 1
-            var pointsAdded = addPoints
-            var verification2 = points !== 0
-            var verification3 = points !== pointsAdded
+    // const whackPoints = useCallback(() => {
+    //     if (whackCombo(true)) {
+    //         var addPoints = points + 0
+    //         var pointsAdded = addPoints
+    //         var verification2 = points !== 0
+    //         var verification3 = points !== pointsAdded
 
 
-            console.log('pointsAdded log:', pointsAdded,)
-            console.log('addPoints log:', addPoints,)
-            console.log('points log:', points)
+    //         console.log('pointsAdded log:', pointsAdded,)
+    //         console.log('addPoints log:', addPoints,)
+    //         console.log('points log:', points)
 
-            console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
-
-
-            if (verification2) {
-                const points = pointsAdded
-                setPoints(points)
-                return points
-            }
-            setPoints(addPoints)
+    //         console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
-            if (verification3) {
-                return pointsAdded
-            }
-            return points
-        }
-    }, [points, weakestCombo])
-
-    const weakPoints = useCallback(() => {
-        if (weakCombo(true)) {
-            var addPoints = points + 2
-            var pointsAdded = addPoints
-            var verification2 = points !== 0
-            var verification3 = points !== pointsAdded
+    //         if (verification2) {
+    //             const points = pointsAdded
+    //             setPoints(points)
+    //             return points
+    //         }
+    //         setPoints(addPoints)
 
 
-            console.log('pointsAdded log:', pointsAdded,)
-            console.log('addPoints log:', addPoints,)
-            console.log('points log:', points)
+    //         if (verification3) {
+    //             return pointsAdded
+    //         }
+    //         return points
+    //     }
+    // }, [points, whackCombo])
 
-            console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
-
-
-            if (verification2) {
-                const points = pointsAdded
-                setPoints(points)
-                return points
-            }
-            setPoints(addPoints)
-
-
-            if (verification3) {
-                return pointsAdded
-            }
-            return points
-        }
-    }, [points, weakCombo])
-
-    const weirdPoints = useCallback(() => {
-        if (weirdCombo(true)) {
-            var addPoints = points + 2
-            var pointsAdded = addPoints
-            var verification2 = points !== 0
-            var verification3 = points !== pointsAdded
+    // const weakestPoints = useCallback(() => {
+    //     if (weakestCombo(true)) {
+    //         var addPoints = points + 1
+    //         var pointsAdded = addPoints
+    //         var verification2 = points !== 0
+    //         var verification3 = points !== pointsAdded
 
 
-            console.log('pointsAdded log:', pointsAdded,)
-            console.log('addPoints log:', addPoints,)
-            console.log('points log:', points)
+    //         console.log('pointsAdded log:', pointsAdded,)
+    //         console.log('addPoints log:', addPoints,)
+    //         console.log('points log:', points)
 
-            console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
-
-
-            if (verification2) {
-                const points = pointsAdded
-                setPoints(points)
-                return points
-            }
-            setPoints(addPoints)
+    //         console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
-            if (verification3) {
-                return pointsAdded
-            }
-            return points
-        }
-    }, [points, weirdCombo])
-
-    const regularPoints = useCallback(() => {
-        if (regularCombo(true)) {
-            var addPoints = points + 3
-            var pointsAdded = addPoints
-            var verification2 = points !== 0
-            var verification3 = points !== pointsAdded
+    //         if (verification2) {
+    //             const points = pointsAdded
+    //             setPoints(points)
+    //             return points
+    //         }
+    //         setPoints(addPoints)
 
 
-            console.log('pointsAdded log:', pointsAdded,)
-            console.log('addPoints log:', addPoints,)
-            console.log('points log:', points)
+    //         if (verification3) {
+    //             return pointsAdded
+    //         }
+    //         return points
+    //     }
+    // }, [points, weakestCombo])
 
-            console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
-
-
-            if (verification2) {
-                const points = pointsAdded
-                setPoints(points)
-                return points
-            }
-            setPoints(addPoints)
-
-
-            if (verification3) {
-                return pointsAdded
-            }
-            return points
-        }
-    }, [points, regularCombo])
-
-    const superPoints = useCallback(() => {
-        if (superCombo(true)) {
-            var addPoints = points + 6
-            var pointsAdded = addPoints
-            var verification2 = points !== 0
-            var verification3 = points !== pointsAdded
+    // const weakPoints = useCallback(() => {
+    //     if (weakCombo(true)) {
+    //         var addPoints = points + 2
+    //         var pointsAdded = addPoints
+    //         var verification2 = points !== 0
+    //         var verification3 = points !== pointsAdded
 
 
-            console.log('pointsAdded log:', pointsAdded,)
-            console.log('addPoints log:', addPoints,)
-            console.log('points log:', points)
+    //         console.log('pointsAdded log:', pointsAdded,)
+    //         console.log('addPoints log:', addPoints,)
+    //         console.log('points log:', points)
 
-            console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
-
-
-            if (verification2) {
-                const points = pointsAdded
-                setPoints(points)
-                return points
-            }
-            setPoints(addPoints)
+    //         console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
-            if (verification3) {
-                return pointsAdded
-            }
-            return points
-        }
-    }, [points, superCombo])
+    //         if (verification2) {
+    //             const points = pointsAdded
+    //             setPoints(points)
+    //             return points
+    //         }
+    //         setPoints(addPoints)
 
-    // Iterating on Whack Points
+
+    //         if (verification3) {
+    //             return pointsAdded
+    //         }
+    //         return points
+    //     }
+    // }, [points, weakCombo])
+
+    // const weirdPoints = useCallback(() => {
+    //     if (weirdCombo(true)) {
+    //         var addPoints = points + 2
+    //         var pointsAdded = addPoints
+    //         var verification2 = points !== 0
+    //         var verification3 = points !== pointsAdded
+
+
+    //         console.log('pointsAdded log:', pointsAdded,)
+    //         console.log('addPoints log:', addPoints,)
+    //         console.log('points log:', points)
+
+    //         console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
+
+
+    //         if (verification2) {
+    //             const points = pointsAdded
+    //             setPoints(points)
+    //             return points
+    //         }
+    //         setPoints(addPoints)
+
+
+    //         if (verification3) {
+    //             return pointsAdded
+    //         }
+    //         return points
+    //     }
+    // }, [points, weirdCombo])
+
+    // const regularPoints = useCallback(() => {
+    //     if (regularCombo(true)) {
+    //         var addPoints = points + 3
+    //         var pointsAdded = addPoints
+    //         var verification2 = points !== 0
+    //         var verification3 = points !== pointsAdded
+
+
+    //         console.log('pointsAdded log:', pointsAdded,)
+    //         console.log('addPoints log:', addPoints,)
+    //         console.log('points log:', points)
+
+    //         console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
+
+
+    //         if (verification2) {
+    //             const points = pointsAdded
+    //             setPoints(points)
+    //             return points
+    //         }
+    //         setPoints(addPoints)
+
+
+    //         if (verification3) {
+    //             return pointsAdded
+    //         }
+    //         return points
+    //     }
+    // }, [points, regularCombo])
+
+    // const superPoints = useCallback(() => {
+    //     if (superCombo(true)) {
+    //         var addPoints = points + 6
+    //         var pointsAdded = addPoints
+    //         var verification2 = points !== 0
+    //         var verification3 = points !== pointsAdded
+
+
+    //         console.log('pointsAdded log:', pointsAdded,)
+    //         console.log('addPoints log:', addPoints,)
+    //         console.log('points log:', points)
+
+    //         console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
+
+
+    //         if (verification2) {
+    //             const points = pointsAdded
+    //             setPoints(points)
+    //             return points
+    //         }
+    //         setPoints(addPoints)
+
+
+    //         if (verification3) {
+    //             return pointsAdded
+    //         }
+    //         return points
+    //     }
+    // }, [points, superCombo])
+
+    //Iterating over different types of points
+
     useEffect(() => {
-        whackPoints()
-    }, [backgroundColor, whackPoints])
-    // Iterating on Weak Points
-    useEffect(() => {
-        weakPoints()
-    }, [backgroundColor, weakPoints])
-    // Iterating on Weakest Points
-    useEffect(() => {
-        weakestPoints()
-    }, [backgroundColor, weakestPoints])
-    // Iterating on Weird Points
-    useEffect(() => {
-        weirdPoints()
-    }, [backgroundColor, weirdPoints])
-    // Iterating on Regular Points
-    useEffect(() => {
-        regularPoints()
-    }, [backgroundColor, regularPoints])
-    // Iterating on Super Points
-    useEffect(() => {
-        superPoints()
-    }, [backgroundColor, superPoints])
-    // Iterating on superWhack Points
-    useEffect(() => {
-        superWhackPoints()
-    }, [backgroundColor, superWhackPoints])
+        whackPoints(points, setPoints, whackCombo)
+        weakestPoints(points, setPoints, weakestCombo)
+        weakPoints(points, setPoints, weakCombo)
+        weirdPoints(points, setPoints, weirdCombo)
+        regularPoints(points, setPoints, regularCombo)
+        superPoints(points, setPoints, superCombo)
+        superWhackPoints(points, superWhackCombo, setPoints)
 
+    }, [
+        backgroundColor,
+        points,
+        whackCombo,
+        regularCombo,
+        weakCombo,
+        weakestCombo,
+        weirdCombo,
+        superCombo,
+        superWhackCombo
+    ])
 
     //setting Array state for combo matching
     useEffect(() => {
         array.push(backgroundColor)
         setArray(array)
-        //setArray( arr => [...arr, `${backgroundColor}`]);
-
-    }, [backgroundColor, array])
+    }, [backgroundColor, setArray])
 
     console.log('Points log:', points)
     console.log('Array log:', array.length, array)

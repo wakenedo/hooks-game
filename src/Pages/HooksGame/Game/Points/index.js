@@ -89,7 +89,7 @@ export const weakPoints = (points, setPoints, weakCombo) => {
   }
 }
 
-export const weirdPoints = (points, setPoints, weirdCombo, setArray) => {
+export const weirdPoints = (points, setPoints, weirdCombo) => {
   if (weirdCombo(true)) {
     var addPoints = points + 2
     var pointsAdded = addPoints
@@ -100,7 +100,6 @@ export const weirdPoints = (points, setPoints, weirdCombo, setArray) => {
     console.log('pointsAdded log:', pointsAdded,)
     console.log('addPoints log:', addPoints,)
     console.log('points log:', points)
-
     console.log('verifications 2 & 3 log:', verification2, '&', verification3,)
 
 
@@ -115,7 +114,6 @@ export const weirdPoints = (points, setPoints, weirdCombo, setArray) => {
     if (verification3) {
       return pointsAdded
     }
-    setArray([])
     return points
   }
 }

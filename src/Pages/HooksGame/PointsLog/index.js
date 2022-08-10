@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Typography, Stack, TableContainer, Table } from '@mui/material'
+import { Box, Typography, TableContainer, Table } from '@mui/material'
 
 const PointsLog = ({ points }) => {
 
@@ -46,39 +46,42 @@ const PointsLog = ({ points }) => {
             }}
         >
             <TableContainer>
-                <Table
-                    sx={{
-                        height: "max-content"
-                    }}
-                >
-                    <Box>
-                        <Typography
-                            fontFamily='Mouse Memoirs, sans-serif;'
-                            fontSize='25px'
-                            textAlign='center'
-                            margin='4px auto'
+                <Table>
+                    <Typography
+                        fontFamily='Mouse Memoirs, sans-serif;'
+                        fontSize='25px'
+                        textAlign='center'
+                        margin='auto'
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+
+                        }}
+                    >
+                        <Box
+                            backgroundColor='#B2B2B2'
+                            height='35px'
                             sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
+                                position: 'sticky',
+                                top: '0',
                             }}
                         >
-
                             Points Log :
-                            <Stack>
-                                {arrayOfPointsLog.map((item) => {
-                                    return (
-                                        <Typography
-                                            key={item.id}
-                                            fontSize='28px'
-                                            fontFamily='Mouse Memoirs, sans-serif;'
-                                        >
-                                            {item.value}
-                                        </Typography>
-                                    )
-                                })}
-                            </Stack>
-                        </Typography>
-                    </Box>
+                        </Box>
+
+                        {arrayOfPointsLog.map((item) => {
+                            return (
+                                <Typography
+                                    key={item.id}
+                                    fontSize='28px'
+                                    fontFamily='Mouse Memoirs, sans-serif;'
+                                >
+                                    {item.value >= 0 ? item.value : null}
+                                </Typography>
+                            )
+                        })}
+
+                    </Typography>
                 </Table>
             </TableContainer>
         </Box>

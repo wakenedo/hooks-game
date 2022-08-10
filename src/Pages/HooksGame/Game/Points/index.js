@@ -1,4 +1,3 @@
-
 export const whackPoints = (points, setPoints, whackCombo) => {
   if (whackCombo(true)) {
     var addPoints = points + 0

@@ -23,9 +23,10 @@ import Game from './Game'
 
 const HooksGame = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [array, setArray] = useState([])
+    const [verificationArray, setVerificationArray] = useState([])
     const [backgroundColor, setBackgroundColor] = useState('#ffeb33')
     const [points, setPoints] = useState(0)
-    const [array, setArray] = useState([])
 
     const toggle = () => {
         setIsOpen(!isOpen);
@@ -64,6 +65,8 @@ const HooksGame = () => {
             return points
         } if (backgroundColor !== '#ffeb33') {
             setBackgroundColor('#ffeb33')
+            array.push(backgroundColor)
+            verificationArray.push(backgroundColor)
         }
 
         return backgroundColor
@@ -77,7 +80,8 @@ const HooksGame = () => {
             return points
         } if (backgroundColor !== '#3388ff') {
             setBackgroundColor('#3388ff')
-
+            array.push(backgroundColor)
+            verificationArray.push(backgroundColor)
         }
 
         return backgroundColor
@@ -91,7 +95,8 @@ const HooksGame = () => {
             return points
         } if (backgroundColor !== '#ff3333') {
             setBackgroundColor('#ff3333')
-
+            array.push(backgroundColor)
+            verificationArray.push(backgroundColor)
         }
 
         return backgroundColor
@@ -149,7 +154,7 @@ const HooksGame = () => {
         return false
 
 
-    }, [whackCombo1, whackCombo2, array])
+    }, [whackCombo1, whackCombo2])
     whackCombo()
 
     const weakestCombo = useCallback(() => {
@@ -302,9 +307,12 @@ const HooksGame = () => {
 
     //setting Array state for combo matching
     useEffect(() => {
-        array.push(backgroundColor)
-        setArray(array)
-    }, [backgroundColor, setArray])
+        if (array === verificationArray) {
+            setArray([])
+            setVerificationArray([])
+            setPoints(points)
+        } else return
+    }, [])
 
     // console.log('Points log:', points)
     // console.log('Array log:', array.length, array)

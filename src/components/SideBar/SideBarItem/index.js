@@ -56,7 +56,7 @@ const SideBarItems = () => {
                   },
                 }}
               >
-                {Items[index].name}
+                {item.name}
               </Typography>
             </Link>
           </Box>

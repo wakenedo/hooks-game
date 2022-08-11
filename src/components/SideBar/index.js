@@ -1,20 +1,11 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
+
 //MaterialUi
 import { Stack, Box, Typography } from '@mui/material'
-//Assets
-import BallIcon from '../../assets/svg/ball-svgrepo-com.svg'
+
+import SideBarItems from './SideBarItem'
 
 const SideBar = ({ isOpen, toggle }) => {
-    const [active, setActive] = useState(false)
-
-    const hover = () => {
-        setActive(true);
-        return active
-    }
-
-
-
     return (
         <Stack
             isOpen={isOpen}
@@ -35,206 +26,16 @@ const SideBar = ({ isOpen, toggle }) => {
             }}
         >
             <Box
-                height='fit-content'
+
                 width={265}
                 margin='auto'
                 display='flex'
                 flexDirection='column'
                 alignItems='center'
 
+
             >
-                <Box
-                    display='flex'
-                    flexDirection='row'
-                    justifyContent='space-between'
-                    marginBottom='25px'
-                >
-                    <Box
-                        width='90px'
-                        paddingLeft='10px'
-                    >
-                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
-                    </Box>
-
-                    <Link
-                        to='/About'
-                        style={{
-                            textDecoration: 'none'
-                        }}
-                    >
-
-                        <Typography
-                            color='#282C34'
-                            fontWeight='bold'
-                            fontSize='18px'
-
-                            sx={{
-                                '&:hover': {
-                                    color: '#5A3392',
-                                },
-                                '&:active': {
-                                    active: `${hover}`
-                                }
-                            }}
-                        >
-                            About the Project
-                        </Typography>
-                    </Link>
-                </Box>
-                <Box
-                    display='flex'
-                    flexDirection='row'
-                    justifyContent='space-between'
-                    marginBottom='25px'
-                >
-                    <Box
-                        width='145px'
-                    >
-                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
-                    </Box>
-                    <Link
-                        to='/Road_Map'
-                        style={{
-                            textDecoration: 'none'
-                        }}
-                    >
-                        <Typography
-                            color='#282C34'
-                            fontWeight='bold'
-                            fontSize='18px'
-                            sx={{
-                                '&:hover': {
-                                    color: '#5A3392',
-                                }
-                            }}
-                        >
-                            Road Map
-                        </Typography>
-                    </Link>
-                </Box>
-                <Box
-                    display='flex'
-                    flexDirection='row'
-                    justifyContent='space-between'
-                    marginBottom='25px'
-                >
-                    <Box
-                        width='110px'
-                    >
-                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
-                    </Box>
-                    <Link
-                        to='/How_To_Play'
-                        style={{
-                            textDecoration: 'none'
-                        }}
-                    >
-                        <Typography
-                            color='#282C34'
-                            fontWeight='bold'
-                            fontSize='18px'
-                            sx={{
-                                '&:hover': {
-                                    color: '#5A3392',
-                                }
-                            }}
-                        >
-                            How to Play
-                        </Typography>
-                    </Link>
-                </Box>
-                <Box
-                    display='flex'
-                    flexDirection='row'
-                    justifyContent='space-between'
-                    marginBottom='25px'
-                >
-                    <Box
-                        width='110px'
-                    >
-                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
-                    </Box>
-                    <Link
-                        to='/Combo_List'
-                        style={{
-                            textDecoration: 'none'
-                        }}
-                    >
-                        <Typography
-                            color='#282C34'
-                            fontWeight='bold'
-                            fontSize='18px'
-                            sx={{
-                                '&:hover': {
-                                    color: '#5A3392',
-                                }
-                            }}
-                        >
-                            Combo List
-                        </Typography>
-                    </Link>
-                </Box>
-                <Box
-                    display='flex'
-                    flexDirection='row'
-                    justifyContent='space-between'
-                    marginBottom='25px'
-                >
-                    <Box
-                        width='165px'
-                    >
-                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
-                    </Box>
-                    <Link
-                        to='/Contact'
-                        style={{
-                            textDecoration: 'none'
-                        }}
-                    >
-                        <Typography
-                            color='#282C34'
-                            fontWeight='bold'
-                            fontSize='18px'
-                            sx={{
-                                '&:hover': {
-                                    color: '#5A3392',
-                                }
-                            }}
-                        >
-                            Contact
-                        </Typography>
-                    </Link>
-                </Box>
-                <Box
-                    display='flex'
-                    flexDirection='row'
-                    justifyContent='space-between'
-                >
-                    <Box
-                        width='165px'
-                    >
-                        {active ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
-                    </Box>
-                    <Link
-                        to='/Donate'
-                        style={{
-                            textDecoration: 'none'
-                        }}
-                    >
-                        <Typography
-                            color='#282C34'
-                            fontWeight='bold'
-                            fontSize='18px'
-                            sx={{
-                                '&:hover': {
-                                    color: '#5A3392',
-                                }
-                            }}
-                        >
-                            Donate
-                        </Typography>
-                    </Link>
-                </Box>
+                <SideBarItems />
 
             </Box>
             <Box

@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 
 import { Box, Typography } from '@mui/material'
 
-//Constants
-import texts from '../../constants/texts.jsx'
 
 //Components
 import NavBar from '../../components/NavBar';
@@ -16,7 +14,7 @@ import SocialMedia from './SocialMedia/index.js';
 import EmailUs from './EmailUs/index.js';
 
 
-console.log(texts)
+
 
 const Contact = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +24,7 @@ const Contact = () => {
     }
 
     window.scrollTo({ top: 0, left: 100, behavior: 'smooth' });
-    
+
     return (
         <Box
             backgroundColor='#FF3333'
@@ -46,7 +44,7 @@ const Contact = () => {
                 Contact
             </Typography>
             <ContactCreator />
-            <SocialMedia/>
+            <SocialMedia />
             <EmailUs />
         </Box>
     )

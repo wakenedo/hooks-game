@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 
 
-//Assets
-import Ball from '../../assets/svg/basketball-svgrepo-com.svg'
-import Title from '../../assets/Home/DropTheBall.png'
-import Play from '../../assets/Home/Play.png'
 
 //MaterialUi
-import { Typography, Box, Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 
 //Components
 import NavBar from '../../components/NavBar';
 import SideBar from '../../components/SideBar';
+
+//Inner Components
+import PlayButton from './PlayButton';
+import Title from './Title';
+import Version from './Version';
+import BallImage from './BallImage';
 
 
 
@@ -42,49 +43,10 @@ const Home = () => {
 
         }}
       >
-        <img
-          alt='title'
-          src={Title}
-          style={{
-            marginBottom: 25,
-            marginTop: 85,
-
-          }}
-        />
-        <Typography
-          letterSpacing={5.5}
-          sx={{
-            fontSize: {
-              xs: 23
-            }
-          }}
-        >
-          version Beta
-        </Typography>
-        <img
-          src={Ball} alt="Drop the ball"
-          style={{
-            width: 300,
-            marginBottom: 95,
-            marginTop: 90
-          }}
-        />
-        <Link
-          to='./Hooks_Game'
-          style={{
-            textDecoration: 'none',
-          }}
-        >
-          <img
-            alt='play'
-            src={Play}
-            style={{
-
-              marginBottom: 85,
-
-            }}
-          />
-        </Link>
+        <Title />
+        <Version />
+        <BallImage />
+        <PlayButton />
 
       </Stack>
     </Box >

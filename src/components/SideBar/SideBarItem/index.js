@@ -13,11 +13,9 @@ const SideBarItems = () => {
 
   const handleMouseEnter = () => {
     setIsHovering(true)
-    return isHovering
   }
   const handleMouseLeave = () => {
     setIsHovering(false)
-    return isHovering
   }
   return (
     <>

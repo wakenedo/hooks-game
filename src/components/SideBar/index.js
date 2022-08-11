@@ -4,7 +4,7 @@ import React from 'react'
 import { Stack, Box, Typography } from '@mui/material'
 
 //Inner Components
-import SideBarItems from './SideBarItem'
+import SideBarItems from './SideBarItems'
 
 const SideBar = ({ isOpen, toggle }) => {
     return (

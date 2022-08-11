@@ -31,7 +31,6 @@ const PlayButton = () => {
           marginBottom: 85,
           transition: isHovering ? 'ease-in-out 0.4s' : '',
           transform: isHovering ? 'scale(1.3)' : ''
-
         }}
       />
     </Link>

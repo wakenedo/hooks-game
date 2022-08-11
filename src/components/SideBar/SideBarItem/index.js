@@ -26,13 +26,10 @@ const SideBarItems = () => {
             flexDirection='row'
             justifyContent='space-between'
             marginBottom='25px'
-            height='fit-content'
-
           >
             <Box
               key={Items[index].id}
               position='left'
-              justifyContent='space-evenly'
               paddingRight='10px'
             >
               {isHovering ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}

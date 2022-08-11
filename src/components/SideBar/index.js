@@ -3,6 +3,7 @@ import React from 'react'
 //MaterialUi
 import { Stack, Box, Typography } from '@mui/material'
 
+//Inner Components
 import SideBarItems from './SideBarItem'
 
 const SideBar = ({ isOpen, toggle }) => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Typography, Stack } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 //Components
 import NavBar from '../../components/NavBar';

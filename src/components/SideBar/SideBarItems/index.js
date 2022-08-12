@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { Box, Typography } from '@mui/material'
 
@@ -9,17 +9,16 @@ import BallIcon from '../../../assets/svg/ball-svgrepo-com.svg'
 import Items from '../../../constants/Items'
 
 const SideBarItems = () => {
-  const [isHovering, setIsHovering] = useState(false)
 
-  const handleMouseEnter = () => {
-    setIsHovering(true)
+  const showIcon = (e) => {
+    const event = e.target
+    console.log(event)
   }
-  const handleMouseLeave = () => {
-    setIsHovering(false)
-  }
+
   return (
     <>
       {Items.map((item, index) => {
+        console.log(item, index)
         return (
           <Box
             display='flex'
@@ -28,11 +27,11 @@ const SideBarItems = () => {
             marginBottom='25px'
           >
             <Box
-              key={Items[index].id}
+              key={Items[index]}
               position='left'
               paddingRight='10px'
             >
-              {isHovering ? <img alt='ball-icon' width={25} src={BallIcon} /> : null}
+              {item.id === index ? <img alt='ball-icon' width={25} src={BallIcon} /> : ''}
             </Box>
 
             <Link
@@ -44,12 +43,11 @@ const SideBarItems = () => {
             >
 
               <Typography
-                key={Items[index].id}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                key={item.id}
                 color='#282C34'
                 fontWeight='bold'
                 fontSize='18px'
+                onMouseOver={showIcon}
                 sx={{
                   '&:hover': {
                     color: '#5A3392',

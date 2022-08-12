@@ -10,15 +10,20 @@ import Items from '../../../constants/Items'
 
 const SideBarItems = () => {
 
-  const showIcon = (e) => {
-    const event = e.target
-    console.log(event)
+  const itemNameOnMouseOver = (e) => {
+    let str = e.target.childNodes[0].wholeText
+    console.log(str)
+    return str
+  }
+
+  const verification = () => {
+    itemNameOnMouseOver()
   }
 
   return (
     <>
       {Items.map((item, index) => {
-        console.log(item, index)
+        console.log(item.name, index)
         return (
           <Box
             display='flex'
@@ -31,7 +36,7 @@ const SideBarItems = () => {
               position='left'
               paddingRight='10px'
             >
-              {item.id === index ? <img alt='ball-icon' width={25} src={BallIcon} /> : ''}
+              {item.name === '' ? <img alt='ball-icon' width={25} src={BallIcon} /> : ''}
             </Box>
 
             <Link
@@ -47,7 +52,7 @@ const SideBarItems = () => {
                 color='#282C34'
                 fontWeight='bold'
                 fontSize='18px'
-                onMouseOver={showIcon}
+                onMouseOver={itemNameOnMouseOver}
                 sx={{
                   '&:hover': {
                     color: '#5A3392',

@@ -22,7 +22,7 @@ const Items = [
     {
         id: 3,
         url: '/Combo_List',
-        name: 'Combo LIst',
+        name: 'Combo List',
 
     },
     {

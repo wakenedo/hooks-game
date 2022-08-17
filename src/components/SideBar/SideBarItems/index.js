@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Box, Typography } from '@mui/material'
 
@@ -9,21 +9,20 @@ import BallIcon from '../../../assets/svg/ball-svgrepo-com.svg'
 import Items from '../../../constants/Items'
 
 const SideBarItems = () => {
+  const [eventString, setEventString] = useState('')
 
   const itemNameOnMouseOver = (e) => {
     let str = e.target.childNodes[0].wholeText
-    console.log(str)
-    return str
+    setEventString(str)
   }
 
-  const verification = () => {
-    itemNameOnMouseOver()
+  const itemNameOnMouseLeave = () => {
+    setEventString('')
   }
 
   return (
     <>
       {Items.map((item, index) => {
-        console.log(item.name, index)
         return (
           <Box
             display='flex'
@@ -36,7 +35,7 @@ const SideBarItems = () => {
               position='left'
               paddingRight='10px'
             >
-              {item.name === '' ? <img alt='ball-icon' width={25} src={BallIcon} /> : ''}
+              {item.name === eventString ? <img alt='ball-icon' width={25} src={BallIcon} /> : ''}
             </Box>
 
             <Link
@@ -53,6 +52,7 @@ const SideBarItems = () => {
                 fontWeight='bold'
                 fontSize='18px'
                 onMouseOver={itemNameOnMouseOver}
+                onMouseLeave={itemNameOnMouseLeave}
                 sx={{
                   '&:hover': {
                     color: '#5A3392',

@@ -1,5 +1,6 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Box, Stack } from '@mui/material'
+import { Combos } from '../../utils/combos'
 
 import {
     superWhackPoints,
@@ -20,6 +21,7 @@ import PointsLog from './PointsLog'
 import ComboLog from './ComboLog'
 import Score from './Score'
 import Game from './Game'
+import { backgroundColorBlue, backgroundColorRed, backgroundColorYellow } from '../../utils/backgroundColor'
 
 const HooksGame = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,81 +34,13 @@ const HooksGame = () => {
         setIsOpen(!isOpen);
     }
 
-    const blue = '#3388ff'
-    const red = '#ff3333'
-    const yellow = '#ffeb33'
-
-
-    //Maybe the errors are coming from the verifications 
-    //since they're all using same logic and kinda of simple one, 
-    ///that might not be correct for all verifications
-    const regularCombo1 = useMemo(() => [yellow, blue, red], [])
-    const regularCombo2 = useMemo(() => [red, blue, yellow], [])
-    const weirdCombo1 = useMemo(() => [blue, yellow, red], []) // Not working properly iterating 2 times
-    const weirdCombo2 = useMemo(() => [blue, red, yellow], []) // Not working properly iterating 2 times
-    const weakCombo1 = useMemo(() => [red, yellow, blue], [])
-    const weakCombo2 = useMemo(() => [yellow, red, blue], [])
-    const weakestCombo1 = useMemo(() => [blue, red, blue], []) // Not working properly array seems to retain last state
-    const weakestCombo2 = useMemo(() => [yellow, blue, yellow], []) // Not working properly array seems to retain last state
-    const whackCombo1 = useMemo(() => [red, blue, red], []) //Iterating 3 points and 2 points
-    const whackCombo2 = useMemo(() => [red, yellow, red], []) //iterating non-stop
-    const _superCombo1 = useMemo(() => [blue, yellow, blue, red], []) //Not working
-    const _superWhack1 = useMemo(() => [blue, yellow, blue, yellow], []) //iterating non-stop
-
-
     // console.log('Background log:', backgroundColor)
 
-    const backgroundColorYellow = () => {
-
-        if (backgroundColor === '#ffeb33') {
-            alert('You dropped the ball 🏀 !', backgroundColor)
-            setPoints(0)
-            setArray([])
-            return points
-        } if (backgroundColor !== '#ffeb33') {
-            setBackgroundColor('#ffeb33')
-            array.push(backgroundColor)
-            verificationArray.push(backgroundColor)
-        }
-
-        return backgroundColor
-    }
-    const backgroundColorBlue = () => {
-
-        if (backgroundColor === '#3388ff') {
-            alert('You dropped the ball 🏀 !', backgroundColor,)
-            setPoints(0)
-            setArray([])
-            return points
-        } if (backgroundColor !== '#3388ff') {
-            setBackgroundColor('#3388ff')
-            array.push(backgroundColor)
-            verificationArray.push(backgroundColor)
-        }
-
-        return backgroundColor
-    }
-    const backgroundColorRed = () => {
-
-        if (backgroundColor === '#ff3333') {
-            alert(' You dropped the ball 🏀 !', backgroundColor)
-            setPoints(0)
-            setArray([])
-            return points
-        } if (backgroundColor !== '#ff3333') {
-            setBackgroundColor('#ff3333')
-            array.push(backgroundColor)
-            verificationArray.push(backgroundColor)
-        }
-
-        return backgroundColor
-    }
-
     const superWhackCombo = useCallback(() => {
-        if (array[0] === _superWhack1[0]) {
-            if (array[1] === _superWhack1[1]) {
-                if (array[2] === _superWhack1[2]) {
-                    if (array[3] === _superWhack1[3]) {
+        if (array[0] === Combos._superWhack1[0]) {
+            if (array[1] === Combos._superWhack1[1]) {
+                if (array[2] === Combos._superWhack1[2]) {
+                    if (array[3] === Combos._superWhack1[3]) {
                         if (points <= 0) {
                             setArray([])
                             setPoints(0)
@@ -126,26 +60,26 @@ const HooksGame = () => {
         return false
 
 
-    }, [_superWhack1, array, points])
-    superWhackCombo()
+    }, [array, points])
+
 
     const whackCombo = useCallback(() => {
-        if (array[0] === whackCombo1[0]) {
-            if (array[1] === whackCombo1[1]) {
-                if (array[2] === whackCombo1[2]) {
+        if (array[0] === Combos.whackCombo1[0]) {
+            if (array[1] === Combos.whackCombo1[1]) {
+                if (array[2] === Combos.whackCombo1[2]) {
                     setArray([])
                     // console.log('whackCombo1',)
+                    return true
                 }
-                return true
             }
         }
-        if (array[0] === whackCombo2[0]) {
-            if (array[1] === whackCombo2[1]) {
-                if (array[2] === whackCombo2[2]) {
+        if (array[0] === Combos.whackCombo2[0]) {
+            if (array[1] === Combos.whackCombo2[1]) {
+                if (array[2] === Combos.whackCombo2[2]) {
                     setArray([])
                     // console.log('whackCombo2',)
+                    return true
                 }
-                return true
             }
 
         }
@@ -154,26 +88,26 @@ const HooksGame = () => {
         return false
 
 
-    }, [whackCombo1, whackCombo2])
-    whackCombo()
+    }, [array])
+
 
     const weakestCombo = useCallback(() => {
-        if (array[0] === weakestCombo1[0]) {
-            if (array[1] === weakestCombo1[1]) {
-                if (array[2] === weakestCombo1[2]) {
+        if (array[0] === Combos.weakestCombo1[0]) {
+            if (array[1] === Combos.weakestCombo1[1]) {
+                if (array[2] === Combos.weakestCombo1[2]) {
                     setArray([])
                     // console.log('weakestCombo1',)
+                    return true
                 }
-                return true
             }
         }
-        if (array[0] === weakestCombo2[0]) {
-            if (array[1] === weakestCombo2[1]) {
-                if (array[2] === weakestCombo2[2]) {
+        if (array[0] === Combos.weakestCombo2[0]) {
+            if (array[1] === Combos.weakestCombo2[1]) {
+                if (array[2] === Combos.weakestCombo2[2]) {
                     setArray([])
                     // console.log('weakestCombo2',)
+                    return true
                 }
-                return true
             }
 
         }
@@ -182,26 +116,26 @@ const HooksGame = () => {
         return false
 
 
-    }, [weakestCombo1, weakestCombo2, array])
-    weakestCombo()
+    }, [array])
+
 
     const weakCombo = useCallback(() => {
-        if (array[0] === weakCombo1[0]) {
-            if (array[1] === weakCombo1[1]) {
-                if (array[2] === weakCombo1[2]) {
+        if (array[0] === Combos.weakCombo1[0]) {
+            if (array[1] === Combos.weakCombo1[1]) {
+                if (array[2] === Combos.weakCombo1[2]) {
                     setArray([])
                     // console.log('weakCombo1',)
+                    return true
                 }
-                return true
             }
         }
-        if (array[0] === weakCombo2[0]) {
-            if (array[1] === weakCombo2[1]) {
-                if (array[2] === weakCombo2[2]) {
+        if (array[0] === Combos.weakCombo2[0]) {
+            if (array[1] === Combos.weakCombo2[1]) {
+                if (array[2] === Combos.weakCombo2[2]) {
                     setArray([])
                     // console.log('weakCombo2',)
+                    return true
                 }
-                return true
             }
 
         }
@@ -209,69 +143,68 @@ const HooksGame = () => {
         // console.log('weak test', array, weakCombo1)
         return false
 
-    }, [weakCombo1, weakCombo2, array])
-    weakCombo()
+    }, [array])
+
 
     const weirdCombo = useCallback(() => {
-        if (array[0] === weirdCombo1[0]) {
-            if (array[1] === weirdCombo1[1]) {
-                if (array[2] === weirdCombo1[2]) {
+        if (array[0] === Combos.weirdCombo1[0]) {
+            if (array[1] === Combos.weirdCombo1[1]) {
+                if (array[2] === Combos.weirdCombo1[2]) {
                     setArray([])
                     console.log('weirdCombo1')
+                    return true
                 }
-                return true
             }
         }
-        if (array[0] === weirdCombo2[0]) {
-            if (array[1] === weirdCombo2[1]) {
-                if (array[2] === weirdCombo2[2]) {
+        if (array[0] === Combos.weirdCombo2[0]) {
+            if (array[1] === Combos.weirdCombo2[1]) {
+                if (array[2] === Combos.weirdCombo2[2]) {
                     setArray([])
 
                     console.log('weirdCombo2',)
+                    return true
                 }
-                return true
             }
 
         }
-        console.log('weirdCombo test', array, weirdCombo1)
+        console.log('weirdCombo test', array)
         return false
 
-    }, [weirdCombo1, weirdCombo2, array])
+    }, [array])
 
 
     const regularCombo = useCallback(() => {
-        if (array[0] === regularCombo1[0]) {
-            if (array[1] === regularCombo1[1]) {
-                if (array[2] === regularCombo1[2]) {
+        if (array[0] === Combos.regularCombo1[0]) {
+            if (array[1] === Combos.regularCombo1[1]) {
+                if (array[2] === Combos.regularCombo1[2]) {
                     setArray([])
                     // console.log('regularCombo1')
+                    return true
                 }
-                return true
             }
         }
-        if (array[0] === regularCombo2[0]) {
-            if (array[1] === regularCombo2[1]) {
-                if (array[2] === regularCombo2[2]) {
+        if (array[0] === Combos.regularCombo2[0]) {
+            if (array[1] === Combos.regularCombo2[1]) {
+                if (array[2] === Combos.regularCombo2[2]) {
                     setArray([])
                     // console.log('regularCombo2',)
+                    return true
                 }
-                return true
             }
 
         }
         // console.log('regular test', array, regularCombo1)
         return false
-    }, [regularCombo1, regularCombo2, array])
+    }, [array])
     regularCombo()
 
     const superCombo = useCallback(() => {
-        if (array[0] === _superCombo1[0]) {
-            if (array[1] === _superCombo1[1]) {
-                if (array[2] === _superCombo1[2]) {
-                    if (array[3] === _superCombo1[3]) {
+        if (array[0] === Combos._superCombo1[0]) {
+            if (array[1] === Combos._superCombo1[1]) {
+                if (array[2] === Combos._superCombo1[2]) {
+                    if (array[3] === Combos._superCombo1[3]) {
                         setArray([])
                         // console.log('_superCombo',)
-
                         return true
                     }
                 }
@@ -280,8 +213,8 @@ const HooksGame = () => {
         // console.log(' super combo test', array, _superCombo1)
         return false
 
-    }, [_superCombo1, array])
-    superCombo()
+    }, [array])
+
 
     //Iterating over different types of points
     useEffect(() => {
@@ -326,9 +259,12 @@ const HooksGame = () => {
             <SideBar isOpen={isOpen} toggle={toggle} />
             <Game
                 backgroundColor={backgroundColor}
-                backgroundColorYellow={backgroundColorYellow}
-                backgroundColorBlue={backgroundColorBlue}
-                backgroundColorRed={backgroundColorRed}
+                backgroundColorYellow={() => backgroundColorYellow(backgroundColor, points, setBackgroundColor,
+                    array, verificationArray, setArray, setPoints)}
+                backgroundColorBlue={() => backgroundColorBlue(backgroundColor, points, setBackgroundColor,
+                    array, verificationArray, setArray, setPoints)}
+                backgroundColorRed={() => backgroundColorRed(backgroundColor, points, setBackgroundColor,
+                    array, verificationArray, setArray, setPoints)}
                 points={points}
             />
             <Score points={points} />
